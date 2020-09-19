@@ -31,7 +31,7 @@ async def about(ctx):
 
 @client.command()
 async def license(ctx):
-    await ctx.send(f'PurpleBot is licensed under the MIT license. That means it\'s open-source and you are free to redistribute your own modifications of the bot.')
+    await ctx.send(f'PurpleBot is licensed under MIT. That means it\'s open-source and you are free to redistribute your own modifications of the bot.')
 
 @client.command()
 async def github(ctx):
