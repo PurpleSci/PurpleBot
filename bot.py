@@ -38,6 +38,10 @@ async def github(ctx):
     await ctx.send(f'PurpleBot\'s source code is avalaible at GitHub: https://github.com/PurpleSci/PurpleBot')
 
 @client.command()
+async def invite(ctx):
+    await ctx.send(f'If you want to integrate PurpleBot into your server, use this link: https://discord.com/api/oauth2/authorize?client_id=750677937837178920&permissions=8&scope=bot')
+
+@client.command()
 async def hello(ctx):
     await ctx.send(random.choice(greetings))
 
@@ -46,8 +50,23 @@ async def predict(ctx):
     await ctx.send(random.choice(predictions))
 
 @client.command()
-async def invite(ctx):
-    await ctx.send(f'If you want to integrate PurpleBot into your server, use this link: https://discord.com/api/oauth2/authorize?client_id=750677937837178920&permissions=8&scope=bot')
+async def pogchamp(ctx):
+    await ctx.send(" ░░░░░▒░░▄██▄░▒░░░░░░ \
+                     ░░░▄██████████▄▒▒░░░ \
+                     ░▒▄████████████▓▓▒░░ \
+                     ▓███▓▓█████▀▀████▒░░ \
+                     ▄███████▀▀▒░░░░▀█▒░░ \
+                     ████████▄░░░░░░░▀▄░░ \
+                     ▀██████▀░░▄▀▀▄░░▄█▒░ \
+                     ░█████▀░░░░▄▄░░▒▄▀░░ \
+                     ░█▒▒██░░░░▀▄█░░▒▄█░░ \
+                     ░█░▓▒█▄░░░░░░░░░▒▓░░ \
+                     ░▀▄░░▀▀░▒░░░░░▄▄░▒░░ \
+                     ░░█▒▒▒▒▒▒▒▒▒░░░░▒░░░ \
+                     ░░░▓▒▒▒▒▒░▒▒▄██▀░░░░ \
+                     ░░░░▓▒▒▒░▒▒░▓▀▀▒░░░░ \
+                     ░░░░░▓▓▒▒░▒░░▓▓░░░░░ \
+                     ░░░░░░░▒▒▒▒▒▒▒░░░░░░ ")
 
 @client.command()
 async def pi(ctx):
