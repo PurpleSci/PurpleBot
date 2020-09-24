@@ -21,9 +21,10 @@ async def on_connect():
     print("Connecting to Discord.....")
 
 @client.event
+async def on_ready():
     await client.change_presence(status=discord.Status.online,
-    activity=discord.Game(f"Type \'p:help\' for the commands. On {len(client.guilds)} sctive servers"))
-    print('PurpleBot has connected to Discord.')
+    activity=discord.Game(f"Type \'p:help\' for the commands. On {len(client.guilds)} servers"))
+    print("PurpleBot has connected to Discord")
 
 @client.command()
 async def ping(ctx):
