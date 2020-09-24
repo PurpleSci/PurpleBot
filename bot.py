@@ -9,7 +9,7 @@ greetings = ["Hello!", "Hallo!", "Bonjour!", "Ciao!", "¡Hola!",
              "Hej!", "Ahoj!", "Aloha!", "Привет!", "Χαίρετε!",
              "你好!", "こんにちは!", "여보세요!", "!مرحبا", "हैलो!"]
 
-predictions = ["Yeah, sure. But don't disturb me again anytime soon, OK?", "What about no? How did such bullshit turn up in your head?", "I'm too busy to bother with you now. Please ask again later. Or, better, don't ask me anything ever. I'm a bad predictor, you know."]
+predictions = ["Yeah, sure. But don't disturb me again anytime soon, OK?", "I guess, no.", "I'm too busy to bother with you now. Please ask again later. Or, better, don't ask me anything ever. I'm a bad predictor, you know."]
 
 vowels = ["a","e","i","o","u","y"]
 
@@ -17,8 +17,12 @@ consonants = ["b","c","d","f","g","h","j","k","l","m", \
                  "n","p","q","r","s","t","v","w","x","z"]
 
 @client.event
-async def on_ready():
-    await client.change_presence(status=discord.Status.online)
+async def on_connect():
+    print("Connecting to Discord.....")
+
+@client.event
+    await client.change_presence(status=discord.Status.online,
+    activity=discord.Game(f"Type \'p:help\' for the commands. On {len(client.guilds)} sctive servers"))
     print('PurpleBot has connected to Discord.')
 
 @client.command()
@@ -87,5 +91,9 @@ async def rubbish(ctx):
             word = word + random.choice(consonants) + random.choice(vowels)
         sentence = sentence + word + " "
     await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
+    
+@client.event
+async def on_disconnect():
+    print("PurpleBot disconnected.")
 
 client.run(os.environ['DISCORD_TOKEN'])
