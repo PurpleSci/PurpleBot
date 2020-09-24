@@ -22,7 +22,7 @@ async def on_connect():
 
 @client.event
     await client.change_presence(status=discord.Status.online,
-    activity=discord.Game(f"Type \'p:help\' for the commands. On {len(client.guilds)} sctive servers"))
+    activity=discord.Game(f"Type \'p:help\' for the commands. On {len(client.guilds)} active servers"))
     print('PurpleBot has connected to Discord.')
 
 @client.command()
