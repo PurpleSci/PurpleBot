@@ -30,7 +30,7 @@ class Moderation(commands.Cog):
     @commands.command()
     @has_permissions(administrator=True)
     async def unmute(self,ctx,member : discord.Member):
-        role = discord.utils.get(ctx.guild.roles, name="Muted")
+        role = discord.utils.get(ctx.guild.roles, name="MutedUsers")
         await member.remove_roles(role)
         await ctx.send(f"The user {user.mention} has been unmuted.")
 
