@@ -9,7 +9,7 @@ greetings = ["Hello!", "Hallo!", "Bonjour!", "Ciao!", "¡Hola!",
              "Hej!", "Ahoj!", "Aloha!", "Привет!", "Χαίρετε!",
              "你好!", "こんにちは!", "여보세요!", "!مرحبا", "हैलो!"]
 
-predictions = ["Yeah, sure. But don't disturb me again anytime soon, OK?", "I guess, no.", "I'm too busy to bother with you now. Please ask again later. Or, better, don't ask me anything ever. I'm a bad predictor, you know."]
+predictions = ["Yeah, sure.", "Probably yes.", "I guess, no.", "Hey, what about no?", "Ask again later.", "I'm busy now, you know."]
 
 vowels = ["a","e","i","o","u","y"]
 
