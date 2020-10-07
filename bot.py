@@ -21,7 +21,7 @@ death_scenarios = ["A snake bit you.", "You met a vampire and he sucked all your
                    "Voldemort came to you and said 'Avada Kedavra!'", \
                    "You were trying to install Gentoo Linux, but failed."]
 
-scary_things = ["😈", "💀", "👻", "🎃", "🧛‍♂️", "🦇", "🕷", "🧟"]
+scary_things = ["😈", "💀", "👻", "🎃", "🧛‍♂️", "🦇", "🧟"]
 
 vowels = ["a","e","i","o","u","y"]
 
