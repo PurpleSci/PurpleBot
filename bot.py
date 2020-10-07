@@ -11,6 +11,18 @@ greetings = ["Hello!", "Hallo!", "Bonjour!", "Ciao!", "¡Hola!",
 
 predictions = ["Yeah, sure.", "Probably yes.", "I guess, no.", "What about no?", "Ask again later.", "I'm busy now, you know."]
 
+death_scenarios = ["A snake bit you.", "You met a vampire and he sucked all your blood.", \
+                   "You drank a glass of juice, but there was poison inside.", \
+                   "You were thrown out into space by a giant gorilla.", "You ate too much mushrooms.", \
+                   "A heavy hammer fell onto your head.", "A zombie strangled you to death.", \
+                   "A maniac cut your throat while you were sleeping.", "You became too old.", \
+                   "You decided that you've had enough and committed suicide.", \
+                   "You wanted to take a vacation in Chernobyl.", \
+                   "Voldemort came to you and said 'Avada Kedavra!'", \
+                   "You were trying to install Gentoo Linux, but failed."]
+
+scary_things = ["😈", "💀", "👻", "🎃", "🧛‍♂️", "🦇", "🕷", "🧟"]
+
 vowels = ["a","e","i","o","u","y"]
 
 consonants = ["b","c","d","f","g","h","j","k","l","m", \
@@ -51,8 +63,20 @@ async def hello(ctx):
     await ctx.send(random.choice(greetings))
 
 @client.command()
+async def randnum(ctx):
+    await ctx.send(random.randint(0, 10000))
+
+@client.command()
 async def predict(ctx):
     await ctx.send(random.choice(predictions))
+
+@client.command()
+async def die(ctx):
+    await ctx.send(random.choice(death_scenarios))
+
+@client.command()
+async def boo(ctx):
+    await ctx.send(random.choice(scary_things))
 
 @client.command()
 async def pogchamp(ctx):
