@@ -63,8 +63,9 @@ ubuntu_versions = [
 	"Ubuntu 19.04 (Disco Dingo)",  \
 	"Ubuntu 19.10 (Eoan Ermine)",  \
 	"Ubuntu 20.04 LTS (Focal Fossa)",  \
-	"Ubuntu 20.10 (Groovy Gorilla)"
-]
+	"Ubuntu 20.10 (Groovy Gorilla)", \
+    "Ubuntu 21.04 (Hirsute Hippo)"
+    ]
 
 vowels = ["a","e","i","o","u","y"]
 
@@ -84,8 +85,47 @@ async def on_ready():
     print("PurpleBot has connected to Discord")
 
 @client.command()
+async def help(ctx):
+    await ctx.send(
+'''
+**Command List**
+
+Moderation
+`ban`
+`kick`
+`mute`
+`unban`
+`unmute`
+
+Fun
+`boo`
+`die`
+`hello`
+`pogchamp`
+`predict`
+`randnum`
+`rubbish`
+
+Science
+`pi`
+`ptable`
+
+Linux
+`gnu`
+`groovy`
+`ubuntu`
+
+Utility
+`about`
+`github`
+`invite`
+`license`
+`ping`
+'''
+    )
+@client.command()
 async def ping(ctx):
-    await ctx.send(f':ping_pong: Pong! Client-side ping took {round(client.latency * 1000)}ms')
+    await ctx.send(f':ping_pong: Pong! Client-side ping latency is {round(client.latency * 1000)}ms')
 
 @client.command()
 async def about(ctx):
