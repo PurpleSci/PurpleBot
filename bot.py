@@ -19,7 +19,7 @@ predictions = [
 death_scenarios = [
     "A snake bit you.", "You met a vampire and he sucked all your blood.", \
     "You drank a glass of juice, but there was poison inside.", \
-    "You were thrown out into space by a giant gorilla.", "You ate too much mushrooms.", \
+    "You were thrown out into space by a giant gorilla.", "You ate too many mushrooms.", \
     "A heavy hammer fell onto your head.", "A zombie strangled you to death.", \
     "A maniac cut your throat while you were sleeping.", "You became too old.", \
     "You decided that you've had enough and committed suicide.", \
