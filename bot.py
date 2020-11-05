@@ -55,8 +55,8 @@ distros = [
     "Endeavour OS", \
     "Zorin OS", \
     "Feren OS", \
-
 ]
+
 ubuntu_versions = [
     "Ubuntu 4.10 (Warty Warthog)", \
     "Ubuntu 5.04 (Hoary Hedgehog)", \
@@ -92,7 +92,26 @@ ubuntu_versions = [
 	"Ubuntu 20.04 LTS (Focal Fossa)",  \
 	"Ubuntu 20.10 (Groovy Gorilla)", \
     "Ubuntu 21.04 (Hirsute Hippo)"
-    ]
+]
+
+debian_versions = [
+    "Debian 1.1 (Buzz)", \
+    "Debian 1.2 (Rex)", \
+    "Debian 1.3 (Bo)", \
+    "Debian 2.0 (Hamm)", \
+    "Debian 2.1 (Slink)", \
+    "Debian 2.2 (Potato)", \
+    "Debian 3.0 (Woody)", \
+    "Debian 3.1 (Sarge)", \
+    "Debian 4.0 (Etch)", \
+    "Debian 5.0 (Lenny)", \
+    "Debian 6.0 (Squeeze)", \
+    "Debian 7 (Wheezy)", \
+    "Debian 8 (Jessie)", \
+    "Debian 9 (Stretch)", \
+    "Debian 10 (Buster)", \
+    "Debian 11 (Bullseye)"
+]
 
 vowels = ["a","e","i","o","u","y"]
 
@@ -179,6 +198,10 @@ async def distro(ctx):
 @client.command()
 async def ubuntu(ctx):
     await ctx.send(random.choice(ubuntu_versions))
+
+@client.command()
+async def debian(ctx):
+    await ctx.send(random.choice(debian_versions))
 
 @client.command()
 async def gnu(ctx):
