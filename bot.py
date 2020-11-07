@@ -233,18 +233,19 @@ async def ptable(ctx):
 @client.command()
 async def rubbish(ctx,lang):
     sentence = ""
-    for i in range(random.randrange(3,7)):
-        word = str()
-        for j in range(random.randrange(1,5)):
-            if lang == "en":
-                word = word + random.choice(consonants_en) + random.choice(vowels_en)
-            if lang == "ru":
-                word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
-            else:
-                await ctx.send(f'Please choose a correct language.')
-                break
-        sentence = sentence + word + " "
-    await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
+    if language == "en" or language == "ru":
+        for i in range(random.randrange(3,7)):
+            word = str()
+                if lang == "en":
+                    for j in range(random.randrange(1,5)):
+                        word = word + random.choice(consonants_en) + random.choice(vowels_en)
+                if lang == "ru":
+                    for j in range(random.randrange(1,5)):
+                        word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
+            sentence = sentence + word + " "
+        await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
+    else:
+        await ctx.send(f'Please choose a correct language.')
     
 @client.event
 async def on_disconnect():
