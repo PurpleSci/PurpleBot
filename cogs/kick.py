@@ -1,10 +1,7 @@
 import discord
 import os
-import random
 from discord.ext import commands
 from discord.ext.commands import has_permissions
-from time import sleep
-from datetime import datetime
 
 class Moderation(commands.Cog):
 
@@ -14,7 +11,8 @@ class Moderation(commands.Cog):
     @commands.command()
     @has_permissions(administrator=True)
     async def kick(self,ctx,member : discord.Member, *, reason = None):
-        await ctx.send(f':white_check_mark: The member {user.mention} has been kicked.')
+        embed=discord.Embed(title=":white_check_mark: Kicked!", color=discord.Colour.purple())
+        await ctx.send(embed=embed)
         await member.kick(reason=reason)
 
 def setup(client):
