@@ -233,7 +233,7 @@ async def ptable(ctx):
 @client.command()
 async def rubbish(ctx,lang):
     sentence = ""
-    if language == "en" or language == "ru":
+    if lang == "en" or lang == "ru":
         for i in range(random.randrange(3,7)):
             word = str()
                 if lang == "en":
