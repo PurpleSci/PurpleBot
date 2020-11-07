@@ -176,6 +176,14 @@ async def boo(ctx):
     await ctx.send(random.choice(scary_things))
 
 @client.command()
+async def rick(ctx):
+    await ctx.send(f'https://youtu.be/dQw4w9WgXcQ')
+
+@client.command()
+async def crabrave(ctx):
+    await ctx.send(f'https://youtu.be/LDU_Txk06tM')
+
+@client.command()
 async def pogchamp(ctx):
     await ctx.send('''
 ░░░░░▒░░▄██▄░▒░░░░░░
