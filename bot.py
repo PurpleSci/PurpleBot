@@ -241,7 +241,7 @@ async def rubbish(ctx,lang):
             if lang == "ru":
                 word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
             else:
-                ctx.send(f'Please choose a correct language.')
+                await ctx.send(f'Please choose a correct language.')
                 break
         sentence = sentence + word + " "
     await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
