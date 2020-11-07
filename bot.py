@@ -111,7 +111,7 @@ debian_versions = [
     "Debian 8 (Jessie)", \
     "Debian 9 (Stretch)", \
     "Debian 10 (Buster)", \
-    "Debian 11 (Bullseye)"
+    "Debian 11 (Bullseye)" \
 ]
 
 vowels_en = ["a","e","i","o","u","y"]
@@ -136,30 +136,6 @@ async def on_ready():
     activity=discord.Game(f"Type \'p:help\' for the commands. On {len(client.guilds)} servers"))
     print("PurpleBot has connected to Discord")
 
-@client.command()
-async def help(ctx):
-    await ctx.send(
-'''
-```
-PurpleBot Command List
-
-Moderation: 
-   ban, kick, mute, unban, unmute
-
-Fun: 
-   boo, crabrave, die, hello, meme, pogchamp, predict, randnum
-
-Science: 
-   pi, ping
-
-Linux: 
-   debian, distro, groovy, interject, ubuntu
-
-Utility: 
-   about, github, help, invite, license, ping, unload
-```
-'''
-    )
 @client.command()
 async def ping(ctx):
     await ctx.send(f':ping_pong: **Pong!** Client-side ping latency is **{round(client.latency * 1000)}ms**')
