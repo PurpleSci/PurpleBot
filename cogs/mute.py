@@ -24,15 +24,15 @@ class Moderation(commands.Cog):
             role = await ctx.guild.create_role(name='MutedUsers', permissions=discord.Permissions(0))
             for channel in ctx.guild.channels:
                 await channel.set_permissions(role, overwrite=overwrite)
+        await ctx.send(f':white_check_mark: The user {user.mention} has been muted.')
         await member.add_roles(role)
-        await ctx.send(f'The user {user.mention} has been muted.')
         
     @commands.command()
     @has_permissions(administrator=True)
     async def unmute(self,ctx,member : discord.Member):
         role = discord.utils.get(ctx.guild.roles, name="MutedUsers")
+        await ctx.send(f":white_check_mark: The user {user.mention} has been unmuted.")
         await member.remove_roles(role)
-        await ctx.send(f"The user {user.mention} has been unmuted.")
 
 def setup(client):
     client.add_cog(Moderation(client))

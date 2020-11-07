@@ -14,8 +14,8 @@ class Moderation(commands.Cog):
     @commands.command()
     @has_permissions(administrator=True)
     async def ban(self,ctx,member : discord.Member, *, reason = None):
+        await ctx.send(f':white_check_mark: The user {user.mention} has been banned.')
         await member.ban(reason=reason)
-        await ctx.send(f'The user {user.mention} has been banned.')
         
     @commands.command()
     @has_permissions(administrator=True)
@@ -23,8 +23,8 @@ class Moderation(commands.Cog):
         banned_users = await ctx.guild.bans()
         for ban_entry in banned_users:
             user = ban_entry.user
+            await ctx.send(f':white_check_mark: The user {user.mention} has been unbanned.')
             await ctx.guild.unban(user)
-            await ctx.send(f'The user {user.mention} has been unbanned.')
 
 def setup(client):
     client.add_cog(Moderation(client))

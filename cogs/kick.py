@@ -14,8 +14,8 @@ class Moderation(commands.Cog):
     @commands.command()
     @has_permissions(administrator=True)
     async def kick(self,ctx,member : discord.Member, *, reason = None):
+        await ctx.send(f':white_check_mark: The member {user.mention} has been kicked.')
         await member.kick(reason=reason)
-        await ctx.send(f':white_check_mark: | The member {user.mention} has been kicked off this server.')
 
 def setup(client):
     client.add_cog(Moderation(client))
