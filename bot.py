@@ -4,6 +4,7 @@ import random
 from discord.ext import commands
 
 client = commands.Bot(command_prefix="p:")
+client.remove_command('help')
 
 greetings = [
     "Hello!", "Hallo!", "Bonjour!", "Ciao!", "¡Hola!",
