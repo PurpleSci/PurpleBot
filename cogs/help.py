@@ -2,9 +2,6 @@ import discord
 import os
 import random
 from discord.ext import commands
-from discord.ext.commands import has_permissions
-from time import sleep
-from datetime import datetime
 
 class Help(commands.Cog):
 
@@ -12,7 +9,6 @@ class Help(commands.Cog):
         self.client = client
 
     @commands.command()
-    @has_permissions(administrator=True)
     async def help(self,ctx):
         await ctx.send('''
 **```
