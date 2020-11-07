@@ -18,9 +18,9 @@ class Help(commands.Cog):
 **```
 PurpleBot's commands.
 ```**
-```
+*```
 Categories:
-```
+```*
 ```
 Moderation: 
    ban, kick, mute, unban, unmute
