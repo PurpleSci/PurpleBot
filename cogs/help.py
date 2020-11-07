@@ -12,7 +12,6 @@ class Help(commands.Cog):
         self.client = client
 
     @commands.command()
-    @has_permissions(administrator=True)
     async def help(self,ctx):
         await ctx.send('''
 **```
