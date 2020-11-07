@@ -18,18 +18,29 @@ class Help(commands.Cog):
 **```
 PurpleBot's commands.
 ```**
+```
 Categories:
-
+```
+```
 Moderation: 
    ban, kick, mute, unban, unmute
+```
+```
 Fun: 
    boo, crabrave, die, hello, pogchamp, predict, randnum, meme
+```
+```
 Science: 
    pi, ping
+```
+```
 Linux: 
    debian, distro, groovy, interject, ubuntu
+```
+```
 Utility: 
    about, github, help, invite, license, ping, unload
+```
  ''')
   
 def setup(client):
