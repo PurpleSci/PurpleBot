@@ -182,9 +182,6 @@ vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
 consonants_ru = ["б","в","г","д","ж","з","к","л","м","н", \
                  "п","р","с","т","ф","х","ц","ч","ш","щ",]
 
-beemovie_script = open('resources/beemovie.txt','r')
-beemovie_script_output = read(beemovie_script)
-
 @client.event
 async def on_connect():
     print("Connecting to Discord...")
@@ -348,7 +345,8 @@ async def avatar(ctx, member: discord.Member = None):
 
 @client.command()
 async def beemovie(ctx):
-    await ctx.send(beemovie_script_output)
+    await ctx.send("https://gist.githubusercontent.com/The5heepDev/a15539b297a7862af4f12ce07fee6bb7/raw/7164813a9b8d0a3b2dcffd5b80005f1967887475/entire_bee_movie_script")
+
 @client.event
 async def on_disconnect():
     print("PurpleBot disconnected.")
