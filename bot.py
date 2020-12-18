@@ -345,7 +345,7 @@ async def avatar(ctx, member: discord.Member = None):
 
 @client.command()
 async def beemovie(ctx):
-    await ctx.send("https://gist.githubusercontent.com/The5heepDev/a15539b297a7862af4f12ce07fee6bb7/raw/7164813a9b8d0a3b2dcffd5b80005f1967887475/entire_bee_movie_script")
+    await ctx.send("So you want to read the entire Bee Movie script, huh? What are you doing with your life? Anyway, if you really need it that much, here you go: https://gist.githubusercontent.com/The5heepDev/a15539b297a7862af4f12ce07fee6bb7/raw/7164813a9b8d0a3b2dcffd5b80005f1967887475/entire_bee_movie_script")
 
 @client.event
 async def on_disconnect():
