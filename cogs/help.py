@@ -12,51 +12,50 @@ class Help(commands.Cog):
     async def help(self,ctx):
         await ctx.send('''
 
-PurpleBot Command List
+**PurpleBot Command List**
 
-:police_officer: Moderation: 
-ban
-kick
-mute
-unban
-unmute
+:police_officer: **Moderation:**
+`ban`
+`kick`
+`mute`
+`unban`
+`unmute`
 
-:rofl: Fun: 
-boo
-beemovie
-crabrave
-die
-hello
-pogchamp
-predict
-randnum
-rick
-say
+:rofl: **Fun:**
+`boo`
+`beemovie`
+`crabrave`
+`die`
+`hello`
+`pogchamp`
+`predict`
+`randnum`
+`rick`
+`say`
 
-:microscope: Science: 
-pi
-ptable
+:microscope: **Science:**
+`pi`
+`ptable`
 
-:desktop: IT & Linux: 
-android
-debian
-distro
-gnu
-groovy
-macos
-ubuntu
-windows
+:desktop: **IT & Linux: **
+`android`
+`debian`
+`distro`
+`gnu`
+`groovy`
+`macos`
+`ubuntu`
+`windows`
 
-:gear: Utility: 
-about
-avatar
-github
-help
-invite
-license
-ping
-unload
-```
+:gear: **Utility:**
+`about`
+`avatar`
+`github`
+`help`
+`invite`
+`license`
+`ping`
+`unload`
  ''')
   
 def setup(client):
