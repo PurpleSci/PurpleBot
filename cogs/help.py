@@ -11,18 +11,16 @@ class Help(commands.Cog):
     @commands.command()
     async def help(self,ctx):
         await ctx.send('''
-**```
+
 PurpleBot Command List
-```**
-```
+
 :police_officer: Moderation: 
 ban
 kick
 mute
 unban
 unmute
-```
-```
+
 :rofl: Fun: 
 boo
 beemovie
@@ -34,13 +32,11 @@ predict
 randnum
 rick
 say
-```
-```
+
 :microscope: Science: 
 pi
 ptable
-```
-```
+
 :desktop: IT & Linux: 
 android
 debian
@@ -50,8 +46,7 @@ groovy
 macos
 ubuntu
 windows
-```
-```
+
 :gear: Utility: 
 about
 avatar
