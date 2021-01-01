@@ -15,7 +15,7 @@ class Help(commands.Cog):
 PurpleBot Command List
 ```**
 ```
-Moderation: 
+:police_officer: Moderation: 
 ban
 kick
 mute
@@ -23,7 +23,7 @@ unban
 unmute
 ```
 ```
-Fun: 
+:rofl: Fun: 
 boo
 beemovie
 crabrave
@@ -36,12 +36,12 @@ rick
 say
 ```
 ```
-Science: 
+:microscope: Science: 
 pi
 ptable
 ```
 ```
-IT & Linux: 
+:desktop: IT & Linux: 
 android
 debian
 distro
@@ -52,7 +52,7 @@ ubuntu
 windows
 ```
 ```
-Utility: 
+:gear: Utility: 
 about
 avatar
 github
