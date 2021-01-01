@@ -206,7 +206,7 @@ async def license(ctx):
 
 @client.command()
 async def github(ctx):
-    await ctx.send(f':computer" PurpleBot\'s source code is avalaible at GitHub: https://github.com/PurpleSci/PurpleBot')
+    await ctx.send(f':computer: PurpleBot\'s source code is avalaible at GitHub: https://github.com/PurpleSci/PurpleBot')
 
 @client.command()
 async def invite(ctx):
