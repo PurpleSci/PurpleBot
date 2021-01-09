@@ -198,7 +198,7 @@ async def ping(ctx):
 
 @client.command()
 async def about(ctx):
-    await ctx.send(f':robot: PurpleBot is a Discord bot by Purple Scientist written in Python. PurpleBot is licensed under MIT. That means it\'s open-source and you are free to redistribute your own modifications of the bot.')
+    await ctx.send(f':robot: PurpleBot is a Discord bot by Purple Scientist written in Python.')
 
 @client.command()
 async def license(ctx):
