@@ -21,7 +21,7 @@ class Help(commands.Cog):
 `unban`
 `unmute`
 
-:rofl: **Fun:**
+:joy: **Fun:**
 `boo`
 `beemovie`
 `crabrave`
