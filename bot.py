@@ -313,7 +313,7 @@ async def rubbish(ctx,lang):
     if lang == "en" or lang == "ru":
         for i in range(random.randrange(3,7)):
             word = str()
-            if lang == "" or lang ="en":
+            if lang == "en":
                 for j in range(random.randrange(1,5)):
                     word = word + random.choice(consonants_en) + random.choice(vowels_en)
             if lang == "ru":
