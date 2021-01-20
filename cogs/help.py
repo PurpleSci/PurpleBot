@@ -55,7 +55,6 @@ class Help(commands.Cog):
 `invite`
 `license`
 `ping`
-`unload`
  ''')
   
 def setup(client):
