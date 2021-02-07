@@ -167,7 +167,8 @@ android_versions = [
     "Android 8.0 (Oreo)", \
     "Android 9 (Pie)", \
     "Android 10", \
-    "Android 11"
+    "Android 11", \
+    "Android 12"
 ]
 
 vowels_en = ["a","e","i","o","u","y"]
