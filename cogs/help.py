@@ -38,6 +38,8 @@ class Help(commands.Cog):
 `subtract`
 `multiply`
 `divide`
+`power`
+`sqrt`
 `pi`
 `ptable`
 
