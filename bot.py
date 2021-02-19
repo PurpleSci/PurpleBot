@@ -1,5 +1,6 @@
 import discord
 import os
+import math
 import random
 from discord.ext import commands
 
@@ -336,6 +337,10 @@ async def divide(ctx,a,b):
 @client.command()
 async def power(ctx,a,b):
     await ctx.send(int(a) ** int(b))
+
+@client.command()
+async def sqrt(ctx,a):
+    await ctx.send(math.sqrt(a))
 
 @client.command()
 async def pi(ctx):
