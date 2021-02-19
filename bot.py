@@ -340,7 +340,7 @@ async def power(ctx,a,b):
 
 @client.command()
 async def sqrt(ctx,a):
-    await ctx.send(math.sqrt(a))
+    await ctx.send(math.sqrt(int(a)))
 
 @client.command()
 async def pi(ctx):
