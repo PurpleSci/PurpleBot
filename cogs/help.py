@@ -22,7 +22,6 @@ class Help(commands.Cog):
 `unmute`
 
 :joy: **Fun:**
-`boo`
 `beemovie`
 `crabrave`
 `die`
@@ -31,9 +30,14 @@ class Help(commands.Cog):
 `predict`
 `randnum`
 `rick`
+`sans`
 `say`
 
-:microscope: **Science:**
+:microscope: **Science & Math:**
+`add`
+`subtract`
+`multiply`
+`divide`
 `pi`
 `ptable`
 

@@ -26,10 +26,9 @@ death_scenarios = [
     "You decided that you've had enough and committed suicide.", \
     "You wanted to take a vacation in Chernobyl.", \
     "Voldemort came to you and said \'Avada Kedavra!\'", \
-    "You were trying to install Arch Linux, but failed."
+    "You were trying to install Gentoo, but failed."
 ]
 
-scary_things = ["😈", "💀", "👻", "🎃", "🧛‍♂️", "🦇", "🧟"]
 
 windows_versions = [
     "Windows 1.x", \
@@ -230,12 +229,8 @@ async def die(ctx):
     await ctx.send(random.choice(death_scenarios))
 
 @client.command()
-async def boo(ctx):
-    await ctx.send(random.choice(scary_things))
-
-@client.command()
 async def rick(ctx):
-    await ctx.send(f'https://tenor.com/view/rick-astley-rick-roll-dancing-dance-moves-gif-14097983')
+    await ctx.send(f'https://tenor.com/view/rick-ashley-dance-80s-music-gif-12136175')
 
 @client.command()
 async def crabrave(ctx):
@@ -262,6 +257,26 @@ async def pogchamp(ctx):
 ░░░░░░░▒▒▒▒▒▒▒░░░░░░
 ''')
 
+@client.command()
+async def sans(ctx):
+    await ctx.send('''
+░░░░░░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░░░░░░
+░░░░░░░░░█░░░░░░░░░░░░░█░░░░░░░░░
+░░░░░░░░█░░░░░░░░░░▄▄▄░░█░░░░░░░░
+░░░░░░░░█░░▄▄▄░░▄░░███░░█░░░░░░░░
+░░░░░░░░▄█░▄░░░▀▀▀░░░▄░█▄░░░░░░░░
+░░░░░░░░█░░▀█▀█▀█▀█▀█▀░░█░░░░░░░░
+░░░░░░░░▄██▄▄▀▀▀▀▀▀▀▄▄██▄░░░░░░░░
+░░░░░░▄█░█▀▀█▀▀▀█▀▀▀█▀▀█░█▄░░░░░░
+░░░░░▄▀░▄▄▀▄▄▀▀▀▄▀▀▀▄▄▀▄▄░▀▄░░░░░
+░░░░░█░░░░▀▄░█▄░░░▄█░▄▀░░░░█░░░░░
+░░░░░░▀▄▄░█░░█▄▄▄▄▄█░░█░▄▄▀░░░░░░
+░░░░░░░░▀██▄▄███████▄▄██▀░░░░░░░░
+░░░░░░░░████████▀████████░░░░░░░░
+░░░░░░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░░░░░░
+░░░░░░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░░﻿░░░░░
+''')
+    
 @client.command()
 async def windows(ctx):
     await ctx.send(random.choice(windows_versions))
@@ -303,8 +318,24 @@ async def groovy(ctx):
     await ctx.send(f'https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_500,h_776/https://assets.ubuntu.com/v1/fe951eda-20.10_Groovy+Gorilla_RPi_Sketch.svg')
 
 @client.command()
+async def add(ctx,a,b):
+    await ctx.send(str(a+b))
+
+@client.command()
+async def subtract(ctx,a,b):
+    await ctx.send(str(a-b))
+
+@client.command()
+async def multiply(ctx,a,b):
+    await ctx.send(str(a*b))
+
+@client.command()
+async def divide(ctx,a,b):
+    await ctx.send(str(a/b))
+
+@client.command()
 async def pi(ctx):
-    await ctx.send(f'Here is π calculated to the first 1000000 digits: http://newton.ex.ac.uk/research/qsystems/collabs/pi/pi6.txt')
+    await ctx.send(f'π = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679...')
 
 @client.command()
 async def ptable(ctx):
