@@ -319,19 +319,19 @@ async def groovy(ctx):
 
 @client.command()
 async def add(ctx,a,b):
-    await ctx.send(str(a+b))
+    await ctx.send(int(a) + int(b))
 
 @client.command()
 async def subtract(ctx,a,b):
-    await ctx.send(str(a-b))
+    await ctx.send(int(a) - int(b))
 
 @client.command()
 async def multiply(ctx,a,b):
-    await ctx.send(str(a*b))
+    await ctx.send(int(a) * int(b))
 
 @client.command()
 async def divide(ctx,a,b):
-    await ctx.send(str(a/b))
+    await ctx.send(int(a) / int(b))
 
 @client.command()
 async def pi(ctx):
