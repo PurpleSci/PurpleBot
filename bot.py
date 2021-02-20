@@ -328,19 +328,19 @@ async def subtract(ctx,a,b):
 
 @client.command()
 async def multiply(ctx,a,b):
-    await ctx.send(int(a) * int(b))
+    await ctx.send(float(a) * float(b))
 
 @client.command()
 async def divide(ctx,a,b):
-    await ctx.send(int(a) / int(b))
+    await ctx.send(float(a) / float(b))
 
 @client.command()
 async def power(ctx,a,b):
-    await ctx.send(int(a) ** int(b))
+    await ctx.send(float(a) ** float(b))
 
 @client.command()
 async def sqrt(ctx,a):
-    await ctx.send(math.sqrt(int(a)))
+    await ctx.send(math.sqrt(float(a)))
 
 @client.command()
 async def pi(ctx):
