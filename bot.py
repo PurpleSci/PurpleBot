@@ -320,11 +320,11 @@ async def groovy(ctx):
 
 @client.command()
 async def add(ctx,a,b):
-    await ctx.send(int(a) + int(b))
+    await ctx.send(float(a) + float(b))
 
 @client.command()
 async def subtract(ctx,a,b):
-    await ctx.send(int(a) - int(b))
+    await ctx.send(float(a) - float(b))
 
 @client.command()
 async def multiply(ctx,a,b):
