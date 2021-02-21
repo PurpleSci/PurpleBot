@@ -319,8 +319,28 @@ async def groovy(ctx):
     await ctx.send(f'https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_500,h_776/https://assets.ubuntu.com/v1/fe951eda-20.10_Groovy+Gorilla_RPi_Sketch.svg')
 
 @client.command()
-async def calc(ctx,ex):
-    await ctx.send(float(ex))
+async def add(ctx,a,b):
+    await ctx.send(float(a) + float(b))
+
+@client.command()
+async def subtract(ctx,a,b):
+    await ctx.send(float(a) - float(b))
+
+@client.command()
+async def multiply(ctx,a,b):
+    await ctx.send(float(a) * float(b))
+
+@client.command()
+async def divide(ctx,a,b):
+    await ctx.send(float(a) / float(b))
+
+@client.command()
+async def power(ctx,a,b):
+    await ctx.send(float(a) ** float(b))
+
+@client.command()
+async def sqrt(ctx,a):
+    await ctx.send(math.sqrt(float(a)))
 
 @client.command()
 async def pi(ctx):
