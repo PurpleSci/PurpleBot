@@ -46,7 +46,6 @@ class Help(commands.Cog):
 :desktop: **IT & Linux: **
 `android`
 `debian`
-`distro`
 `gnu`
 `groovy`
 `macos`

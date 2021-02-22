@@ -66,33 +66,6 @@ macos_versions = [
     "macOS 11.0 (Big Sur)"
 ]
 
-distros = [
-    "Ubuntu", \
-    "Debian", \
-    "Arch", \
-    "Manjaro", \
-    "Fedora", \
-    "OpenSUSE", \
-    "RHEL", \
-    "CentOS", \
-    "Linux Mint", \
-    "elementary OS", \
-    "Pop!_OS", \
-    "Solus", \
-    "Gentoo", \
-    "Slackware", \
-    "Alpine", \
-    "Void", \
-    "Deepin", \
-    "KDE neon", \
-    "Kali Linux", \
-    "MX Linux", \
-    "Linux Lite", \
-    "Endeavour OS", \
-    "Zorin OS", \
-    "Feren OS", \
-]
-
 ubuntu_versions = [
     "Ubuntu 4.10 (Warty Warthog)", \
     "Ubuntu 5.04 (Hoary Hedgehog)", \
@@ -285,10 +258,6 @@ async def windows(ctx):
 @client.command()
 async def macos(ctx):
     await ctx.send(random.choice(macos_versions))
-
-@client.command()
-async def distro(ctx):
-    await ctx.send(random.choice(distros))
 
 @client.command()
 async def ubuntu(ctx):
