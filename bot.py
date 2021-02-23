@@ -337,11 +337,11 @@ async def rubbish(ctx,lang):
         await ctx.send(f'Please choose a correct language.')
 
 @client.command()
-async def say(ctx,*,arg):
+async def say(ctx,*,message):
     await ctx.channel.purge(limit=1)
     if(arg != "@everyone"):
         if (arg != "@here"):
-            await ctx.send(f"{arg}")
+            await ctx.send(f"{message}")
         else:
             await ctx.send("You are not allowed to ping `@here`. Continuing this act will result in a punishment.")
     else:
