@@ -22,7 +22,6 @@ class Help(commands.Cog):
 `unmute`
 
 :joy: **Fun:**
-`beemovie`
 `crabrave`
 `die`
 `hello`
@@ -47,7 +46,6 @@ class Help(commands.Cog):
 `android`
 `debian`
 `gnu`
-`groovy`
 `macos`
 `ubuntu`
 `windows`

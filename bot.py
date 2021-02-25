@@ -30,120 +30,6 @@ death_scenarios = [
     "You were trying to install Gentoo, but failed."
 ]
 
-
-windows_versions = [
-    "Windows 1.x", \
-    "Windows 2.x", \
-    "Windows 3.x", \
-    "Windows 95", \
-    "Windows 98", \
-    "Windows 2000", \
-    "Windows Me", \
-    "Windows XP", \
-    "Windows Vista", \
-    "Windows 7", \
-    "Windows 8", \
-    "Windows 10"
-]
-
-macos_versions = [
-    "macOS 10.0 (Cheetah)", \
-    "macOS 10.1 (Puma)", \
-    "macOS 10.2 (Jaguar)", \
-    "macOS 10.3 (Panther)", \
-    "macOS 10.4 (Tiger)", \
-    "macOS 10.5 (Leopard)", \
-    "macOS 10.6 (Snow Leopard)", \
-    "macOS 10.7 (Lion)", \
-    "macOS 10.8 (Mountain Lion)", \
-    "macOS 10.9 (Mavericks)", \
-    "macOS 10.10 (Yosemite)", \
-    "macOS 10.11 (El Capitan)", \
-    "macOS 10.12 (Sierra)", \
-    "macOS 10.13 (High Sierra)", \
-    "macOS 10.14 (Mojave)", \
-    "macOS 10.15 (Catalina)", \
-    "macOS 11.0 (Big Sur)"
-]
-
-ubuntu_versions = [
-    "Ubuntu 4.10 (Warty Warthog)", \
-    "Ubuntu 5.04 (Hoary Hedgehog)", \
-	"Ubuntu 5.10 (Breezy Badger)", \
-    "Ubuntu 6.06 LTS (Dapper Drake)", \
-	"Ubuntu 6.10 (Edgy Eft)", \
-	"Ubuntu 7.04 (Feisty Fawn)", \
-	"Ubuntu 7.10 (Gutsy Gibbon)", \
-	"Ubuntu 8.04 LTS (Hardy Heron)", \
-	"Ubuntu 8.10 (Intrepid Ibex)", \
-	"Ubuntu 9.04 (Jaunty Jackalope)", \
-	"Ubuntu 9.10 (Karmic Koala)",  \
-	"Ubuntu 10.04 LTS (Lucid Lynx)",  \
-	"Ubuntu 10.10 (Maverick Meerkat)",  \
-	"Ubuntu 11.04 (Natty Narwhal)",  \
-	"Ubuntu 11.10 (Oneiric Ocelot)",  \
-	"Ubuntu 12.04 LTS (Precise Pangolin)",  \
-	"Ubuntu 12.10 (Quantal Quetzal)",  \
-	"Ubuntu 13.04 (Raring Ringtail)",  \
-	"Ubuntu 13.10 (Saucy Salamander)",  \
-	"Ubuntu 14.04 LTS (Trusty Tahr)",  \
-	"Ubuntu 14.10 (Utopic Unicorn)",  \
-	"Ubuntu 15.04 (Vivid Vervet)",  \
-	"Ubuntu 15.10 (Wily Werewolf)",  \
-	"Ubuntu 16.04 LTS (Xenial Xerus)",  \
-	"Ubuntu 16.10 (Yakkety Yak)",  \
-	"Ubuntu 17.04 (Zesty Zapus)",  \
-	"Ubuntu 17.10 (Artful Aardvark)",  \
-	"Ubuntu 18.04 LTS (Bionic Beaver)",  \
-	"Ubuntu 18.10 (Cosmic Cuttlefish)",  \
-	"Ubuntu 19.04 (Disco Dingo)",  \
-	"Ubuntu 19.10 (Eoan Ermine)",  \
-	"Ubuntu 20.04 LTS (Focal Fossa)",  \
-	"Ubuntu 20.10 (Groovy Gorilla)", \
-    "Ubuntu 21.04 (Hirsute Hippo)"
-]
-
-debian_versions = [
-    "Debian 1.1 (Buzz)", \
-    "Debian 1.2 (Rex)", \
-    "Debian 1.3 (Bo)", \
-    "Debian 2.0 (Hamm)", \
-    "Debian 2.1 (Slink)", \
-    "Debian 2.2 (Potato)", \
-    "Debian 3.0 (Woody)", \
-    "Debian 3.1 (Sarge)", \
-    "Debian 4.0 (Etch)", \
-    "Debian 5.0 (Lenny)", \
-    "Debian 6.0 (Squeeze)", \
-    "Debian 7 (Wheezy)", \
-    "Debian 8 (Jessie)", \
-    "Debian 9 (Stretch)", \
-    "Debian 10 (Buster)", \
-    "Debian 11 (Bullseye)", \
-    "Debian 12 (Bookworm)", \
-    "Debian 13 (Trixie)"
-]
-
-android_versions = [
-    "Android 1.5 (Cupcake)", \
-    "Android 1.6 (Donut)", \
-    "Android 2.0 (Eclair)", \
-    "Android 2.2 (Froyo)", \
-    "Android 2.3 (Gingerbread)", \
-    "Android 3.0 (Honeycomb)", \
-    "Android 4.0 (Ice Cream Sandwich)", \
-    "Android 4.1 (Jelly Bean)", \
-    "Android 4.4 (KitKat)", \
-    "Android 5.0 (Lollipop)", \
-    "Android 6.0 (Marshmallow)", \
-    "Android 7.0 (Nougat)", \
-    "Android 8.0 (Oreo)", \
-    "Android 9 (Pie)", \
-    "Android 10", \
-    "Android 11", \
-    "Android 12"
-]
-
 vowels_en = ["a","e","i","o","u","y"]
 
 consonants_en = [
@@ -253,23 +139,128 @@ async def sans(ctx):
     
 @client.command()
 async def windows(ctx):
-    await ctx.send(random.choice(windows_versions))
+    await ctx.send(
+'''
+Windows 95
+Windows 98
+Windows 2000
+Windows Me
+Windows XP
+Windows Vista
+Windows 7
+Windows 8
+Windows 10
+'''  
+)
 
 @client.command()
 async def macos(ctx):
-    await ctx.send(random.choice(macos_versions))
+    await ctx.send(
+'''
+macOS 10.0 "Cheetah"
+macOS 10.1 "Puma"
+macOS 10.2 "Jaguar"
+macOS 10.3 "Panther"
+macOS 10.4 "Tiger"
+macOS 10.5 "Leopard"
+macOS 10.6 "Snow Leopard"
+macOS 10.7 "Lion"
+macOS 10.8 "Mountain Lion"
+macOS 10.9 "Mavericks"
+macOS 10.10 "Yosemite"
+macOS 10.11 "El Capitan"
+macOS 10.12 "Sierra"
+macOS 10.13 "High Sierra"
+macOS 10.14 "Mojave"
+macOS 10.15 "Catalina"
+macOS 11.0 "Big Sur"
+'''
+)
 
 @client.command()
 async def ubuntu(ctx):
-    await ctx.send(random.choice(ubuntu_versions))
+    await ctx.send(
+'''
+Ubuntu 4.10 "Warty Warthog"
+Ubuntu 5.04 "Hoary Hedgehog"
+Ubuntu 5.10 "Breezy Badger"
+Ubuntu 6.06 LTS "Dapper Drake"
+Ubuntu 6.10 "Edgy Eft"
+Ubuntu 7.04 "Feisty Fawn"
+Ubuntu 7.10 "Gutsy Gibbon"
+Ubuntu 8.04 LTS "Hardy Heron"
+Ubuntu 8.10 "Intrepid Ibex"
+Ubuntu 9.04 "Jaunty Jackalope"
+Ubuntu 9.10 "Karmic Koala"
+Ubuntu 10.04 LTS "Lucid Lynx"
+Ubuntu 10.10 "Maverick Meerkat"
+Ubuntu 11.04 "Natty Narwhal"
+Ubuntu 11.10 "Oneiric Ocelot"
+Ubuntu 12.04 LTS "Precise Pangolin"
+Ubuntu 12.10 "Quantal Quetzal"
+Ubuntu 13.04 "Raring Ringtail"
+Ubuntu 13.10 "Saucy Salamander"
+Ubuntu 14.04 LTS "Trusty Tahr"
+Ubuntu 14.10 "Utopic Unicorn"
+Ubuntu 15.04 "Vivid Vervet"
+Ubuntu 15.10 "Wily Werewolf"
+Ubuntu 16.04 LTS "Xenial Xerus"
+Ubuntu 16.10 "Yakkety Yak"
+Ubuntu 17.04 "Zesty Zapus"
+Ubuntu 17.10 "Artful Aardvark"
+Ubuntu 18.04 LTS "Bionic Beaver"
+Ubuntu 18.10 "Cosmic Cuttlefish"
+Ubuntu 19.04 "Disco Dingo"
+Ubuntu 19.10 "Eoan Ermine"
+Ubuntu 20.04 LTS "Focal Fossa"
+Ubuntu 20.10 "Groovy Gorilla"
+'''
+)
 
 @client.command()
 async def debian(ctx):
-    await ctx.send(random.choice(debian_versions))
+    await ctx.send(
+'''
+Debian 1.1 "Buzz"
+Debian 1.2 "Rex"
+Debian 1.3 "Bo"
+Debian 2.0 "Hamm"
+Debian 2.1 "Slink"
+Debian 2.2 "Potato"
+Debian 3.0 "Woody"
+Debian 3.1 "Sarge"
+Debian 4.0 "Etch"
+Debian 5.0 "Lenny"
+Debian 6.0 "Squeeze"
+Debian 7 "Wheezy"
+Debian 8 "Jessie"
+Debian 9 "Stretch"
+Debian 10 "Buster"
+'''
+)
 
 @client.command()
 async def android(ctx):
-    await ctx.send(random.choice(android_versions))
+    await ctx.send(
+'''
+Android 1.5 "Cupcake"
+Android 1.6 "Donut"
+Android 2.0 "Eclair"
+Android 2.2 "Froyo"
+Android 2.3 "Gingerbread"
+Android 3.0 "Honeycomb"
+Android 4.0 "Ice Cream Sandwich"
+Android 4.1 "Jelly Bean"
+Android 4.4 "KitKat"
+Android 5.0 "Lollipop"
+Android 6.0 "Marshmallow"
+Android 7.0 "Nougat"
+Android 8.0 "Oreo"
+Android 9 "Pie"
+Android 10
+Android 11
+'''
+)
 
 @client.command()
 async def gnu(ctx):
@@ -281,11 +272,7 @@ Many computer users run a modified version of the GNU system every day, without 
 
 Linux is the kernel: the program in the system that allocates the machine’s resources to the other programs that you run. The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system. Linux is normally used in combination with the GNU operating system: the whole system is basically GNU with Linux added, or GNU/Linux. All the so-called “Linux” distributions are really distributions of GNU/Linux.
 '''
-    )
-
-@client.command()
-async def groovy(ctx):
-    await ctx.send(f'https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_500,h_776/https://assets.ubuntu.com/v1/fe951eda-20.10_Groovy+Gorilla_RPi_Sketch.svg')
+)
 
 @client.command()
 async def add(ctx,a,b):
@@ -354,10 +341,6 @@ async def avatar(ctx, member: discord.Member = None):
     embed = discord.Embed(colour=discord.Colour.purple(), title=f"{member}'s avatar")
     embed.set_image(url=member.avatar_url)
     await ctx.send(embed=embed)
-
-@client.command()
-async def beemovie(ctx):
-    await ctx.send("So you want to read the entire Bee Movie script, huh? What are you doing with your life? Anyway, if you really need it that much, here you go: https://gist.githubusercontent.com/The5heepDev/a15539b297a7862af4f12ce07fee6bb7/raw/7164813a9b8d0a3b2dcffd5b80005f1967887475/entire_bee_movie_script")
 
 @client.event
 async def on_disconnect():
