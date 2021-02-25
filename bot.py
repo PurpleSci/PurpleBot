@@ -191,8 +191,8 @@ async def hello(ctx):
     await ctx.send(random.choice(greetings))
 
 @client.command()
-async def randnum(ctx):
-    await ctx.send(random.randint(0, 10000))
+async def randnum(ctx,a,b):
+    await ctx.send(random.randint(int(a), int(b)))
 
 @client.command()
 async def predict(ctx):
