@@ -205,6 +205,10 @@ async def avatar(ctx, member: discord.Member = None):
     embed.set_image(url=member.avatar_url)
     await ctx.send(embed=embed)
 
+@client.command()
+async def clear(ctx,quantity)
+await ctx.channel.purge(limit=quantity)
+
 @client.event
 async def on_disconnect():
     print("PurpleBot disconnected.")

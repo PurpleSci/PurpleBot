@@ -16,6 +16,7 @@ class Help(commands.Cog):
 
 :police_officer: **Moderation:**
 `ban`
+`clear`
 `kick`
 `mute`
 `unban`
