@@ -42,14 +42,6 @@ class Help(commands.Cog):
 `pi`
 `ptable`
 
-:desktop: **IT & Linux: **
-`android`
-`debian`
-`gnu`
-`macos`
-`ubuntu`
-`windows`
-
 :gear: **Utility:**
 `about`
 `avatar`
