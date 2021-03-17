@@ -15,19 +15,22 @@ greetings = [
 
 predictions = [
     "Yeah, sure.", "Probably yes.", "Yes, totally.", "Obviously, yes!",
-    "I guess, no.", "What about no?", "Nah. Not at all.", "Are you kidding me? Of course, no!"
+    "I guess, no.", "What about no?", "Nah. Not at all.", "Are you kidding me? Of course, no!",
+    "Hmm, I don't know.", "I can't tell.", "I can't tell right now, try again later.",
+    "Sorry Link, I can't *GIVE* free predictions. Come back when you're a little, mmmmmmm... richer!"
 ]
 
 death_scenarios = [
     "A snake bit you.", "You met a vampire and he sucked all your blood.", \
     "You drank a glass of juice, but there was poison inside.", \
-    "You were thrown out into space by a giant monkey.", "You ate too many mushrooms.", \
+    "You were thrown out into space by a giant monkey.", "You decided to eat 1,000,000 chips.", \
     "A heavy hammer fell onto your head.", "A zombie strangled you to death.", \
     "A maniac cut your throat while you were sleeping.", "You became too old.", \
-    "You decided that you've had enough and committed suicide.", \
-    "You wanted to take a vacation in Chernobyl.", \
+    "You committed suicide.", \
+    "You wanted to take a vacation in Pripyat.", \
     "Voldemort came to you and said \'Avada Kedavra!\'", \
-    "You were trying to install Gentoo, but failed."
+    "You were trying to install Gentoo, but failed.", \
+    "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
 
 vowels_en = ["a","e","i","o","u","y"]
