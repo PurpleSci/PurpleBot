@@ -17,7 +17,7 @@ predictions = [
     "Yeah, sure.", "Probably yes.", "Yes, totally.", "Obviously, yes!",
     "I guess, no.", "What about no?", "Nah. Not at all.", "Are you kidding me? Of course, no!",
     "Hmm, I don't know.", "I can't tell.", "I can't tell right now, try again later.",
-    "Sorry Link, I can't *GIVE* free predictions. Come back when you're a little, mmmmmmm... richer!"
+    "Sorry Link, I can't *give* free predictions. Come back when you're a little, mmmmmmm... richer!"
 ]
 
 death_scenarios = [
