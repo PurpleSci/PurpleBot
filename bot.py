@@ -15,7 +15,9 @@ greetings = [
 
 predictions = [
     "Yeah, sure.", "Probably yes.", "Yes, totally.", "Obviously, yes!",
-    "I guess, no.", "What about no?", "Nah. Not at all.", "Are you kidding me? Of course, no!"
+    "I guess, no.", "What about no?", "Nah. Not at all.", "Are you kidding me? Of course, no!",
+    "Hmm, I don't know.", "I can't tell.", "I can't tell right now, try again later.",
+    "Sorry Link, I can't *GIVE* free predictions. Come back when you're a little, mmmmmmm... Richer!"
 ]
 
 death_scenarios = [
@@ -27,7 +29,8 @@ death_scenarios = [
     "You decided that you've had enough and committed suicide.", \
     "You wanted to take a vacation in Chernobyl.", \
     "Voldemort came to you and said \'Avada Kedavra!\'", \
-    "You were trying to install Gentoo, but failed."
+    "You were trying to install Gentoo, but failed.", \
+    "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
 
 vowels_en = ["a","e","i","o","u","y"]
