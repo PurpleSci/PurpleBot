@@ -30,6 +30,7 @@ death_scenarios = [
     "You wanted to take a vacation in Pripyat.", \
     "Voldemort came to you and said \'Avada Kedavra!\'", \
     "You were trying to install Gentoo, but failed.", \
+    "Jigglypuff hugged you too hard.", \
     "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
 
