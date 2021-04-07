@@ -25,6 +25,7 @@ class Help(commands.Cog):
 `crabrave`
 `die`
 `hello`
+`piglatin (IN DEVELOPMENT)`
 `pogchamp`
 `predict`
 `randnum`
