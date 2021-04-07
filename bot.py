@@ -203,13 +203,13 @@ async def say(ctx,*,arg):
 
 @client.command()
 async def piglatin(ctx,sentence):
-    def piglatin(word)
+    def pig(word)
         if word[0] in "aeiou":
             return word + 'ay'
         else:
             return word[1:] + word[0] + 'ay'
 
-    await ctx.send(' '.join(piglatin(word) for word in sentence.split()))
+    await ctx.send(' '.join(pig(word) for word in sentence.split()))
 
 @client.command()
 async def avatar(ctx, member: discord.Member = None):
