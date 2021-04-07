@@ -203,7 +203,7 @@ async def say(ctx,*,arg):
 
 @client.command()
 async def piglatin(ctx,arg):
-    if len(arg) > 0 and arg.isalpha():
+    if len(arg) > 0:
         word = arg.lower()
         first = word[0]
         if first == ('a' or 'e' or 'i' or 'o' or 'u'):
