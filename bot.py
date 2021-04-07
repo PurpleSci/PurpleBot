@@ -204,7 +204,7 @@ async def say(ctx,*,arg):
 @client.command()
 async def piglatin(ctx,word):
     if word[0] in "aeiou":
-        await ctx.send(word + 'ay')
+        await ctx.send(word + 'way')
     else:
         await ctx.send(word[1:] + word[0] + 'ay')
 
