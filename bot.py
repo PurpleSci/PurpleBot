@@ -34,11 +34,11 @@ death_scenarios = [
     "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
 
-vowels_en = ["a","e","i","o","u","y"]
+vowels_en = ["a","e","i","o","u"]
 
 consonants_en = [
     "b","c","d","f","g","h","j","k","l","m", \
-    "n","p","q","r","s","t","v","w","x","z"
+    "n","p","q","r","s","t","v","w","x","y","z"
 ]
 
 vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
