@@ -202,6 +202,18 @@ async def say(ctx,*,arg):
         await ctx.send("You are not allowed to ping `@everyone`. Continuing this act will result in a punishment.")
 
 @client.command()
+async def piglatin(ctx,arg):
+    if len(arg) > 0 and arg.isalpha():
+        word = arg.lower()
+        first = word[0]
+        if first == ('a' or 'e' or 'i' or 'o' or 'u'):
+            new_word = word + 'ay'
+            print new_word
+        else:
+            new_word = word[1:] + first + 'ay'
+            print new_word
+
+@client.command()
 async def avatar(ctx, member: discord.Member = None):
     if not member:
         member = ctx.message.author
