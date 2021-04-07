@@ -203,15 +203,7 @@ async def say(ctx,*,arg):
 
 @client.command()
 async def piglatin(ctx,arg):
-    if len(arg) > 0:
-        word = arg.lower()
-        first = word[0]
-        if first == ('a' or 'e' or 'i' or 'o' or 'u'):
-            new_word = word + 'ay'
-            print new_word
-        else:
-            new_word = word[1:] + first + 'ay'
-            print new_word
+    pass
 
 @client.command()
 async def avatar(ctx, member: discord.Member = None):
