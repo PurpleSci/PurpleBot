@@ -26,15 +26,12 @@ class Help(commands.Cog):
 `die`
 `hello`
 `piglatin`
+`pogchamp`
 `predict`
 `randnum`
 `rick`
+`sans`
 `say`
-
-:regional_indicator_a: **ASCII Art:**
-`gollum`
-`pikachu`
-`tux`
 
 :microscope: **Science & Math:**
 `add`
