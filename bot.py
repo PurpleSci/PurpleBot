@@ -244,7 +244,7 @@ async def weather(ctx, *, city: str):
             embed.add_field(name="Temperature(C)", value=f"**{current_temperature_celsius}°C**", inline=False)
             embed.add_field(name="Humidity(%)", value=f"**{current_humidity}%**", inline=False)
             embed.add_field(name="Atmospheric Pressure(hPa)", value=f"**{current_pressure}hPa**", inline=False)
-            embed.set_thumbnail(url="https://i.ibb.co/CMrsxdX/weather.png")
+            embed.set_thumbnail(url="https://portal.trta.org/imis15/images/TRTA/sun.png")
             embed.set_footer(text=f"Requested by {ctx.author.name}")
             await channel.send(embed=embed)
     else:
