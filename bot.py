@@ -105,7 +105,7 @@ async def crabrave(ctx):
     await ctx.send(f'https://tenor.com/view/crabs-dancing-having-fun-having-party-party-gif-15660530')
 
 @client.command()
-async def pogchamp(ctx):
+async def pog(ctx):
     await ctx.send('''
 ░░░░░▒░░▄██▄░▒░░░░░░
 ░░░▄██████████▄▒▒░░░
