@@ -19,7 +19,7 @@ class Help(commands.Cog):
                                              sans, say`")
         embed.add_field(name="Science & Math", value=f"`add, subtract, multiply, divide, \
                                                         power, sqrt, pi, weather`")
-        embed.add_field(name="utility", value=f"`about, avatar, github, help, \
+        embed.add_field(name="Utility", value=f"`about, avatar, github, help, \
                                                  invite, license, ping`")                                                
         await ctx.send(embed=embed)
 
