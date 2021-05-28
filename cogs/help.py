@@ -42,6 +42,7 @@ class Help(commands.Cog):
 `sqrt`
 `pi`
 `ptable`
+`weather`
 
 :gear: **Utility:**
 `about`
