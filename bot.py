@@ -241,7 +241,7 @@ async def weather(ctx, *, city: str):
                               color=ctx.guild.me.top_role.color,
                               timestamp=ctx.message.created_at,)
             embed.add_field(name="Descripition", value=f"**{weather_description}**", inline=False)
-            embed.add_field(name="Temperature(C)", value=f"**{current_temperature_celsiuis}°C**", inline=False)
+            embed.add_field(name="Temperature(C)", value=f"**{current_temperature_celsius}°C**", inline=False)
             embed.add_field(name="Humidity(%)", value=f"**{current_humidity}%**", inline=False)
             embed.add_field(name="Atmospheric Pressure(hPa)", value=f"**{current_pressure}hPa**", inline=False)
             embed.set_thumbnail(url="https://i.ibb.co/CMrsxdX/weather.png")
