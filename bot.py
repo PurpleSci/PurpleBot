@@ -216,7 +216,9 @@ async def piglatin(ctx,word):
 async def avatar(ctx, member: discord.Member = None):
     if not member:
         member = ctx.message.author
-    embed = discord.Embed(colour=discord.Colour.purple(), title=f"{member}'s avatar")
+    embed = discord.Embed(title=f"{member}'s avatar",
+                          color=ctx.guild.me.top_role.color, 
+                          timestamp=ctx.message.created_at)
     embed.set_image(url=member.avatar_url)
     await ctx.send(embed=embed)
 
@@ -237,7 +239,7 @@ async def weather(ctx, *, city: str):
         weather_description = z[0]["description"]        
         embed = discord.Embed(title=f"Weather in {city_name}",
                             color=ctx.guild.me.top_role.color,
-                            timestamp=ctx.message.created_at,)
+                            timestamp=ctx.message.created_at)
         embed.add_field(name="Descripition", value=f"**{weather_description}**", inline=False)
         embed.add_field(name="Temperature (C)", value=f"**{current_temperature_celsius}°C**", inline=False)
         embed.add_field(name="Humidity (%)", value=f"**{current_humidity}%**", inline=False)

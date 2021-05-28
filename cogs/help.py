@@ -10,26 +10,18 @@ class Help(commands.Cog):
 
     @commands.command()
     async def help(self,ctx):
-        await ctx.send('''
+        embed = discord.Embed(title=f"PurpleBot Command List",
+                          color=ctx.guild.me.top_role.color, 
+                          timestamp=ctx.message.created_at)
+        embed.add_field(name="Moderation", value=f"`ban, kick, mute, unban, unmute`")
+        embed.add_field(name="Fun", value=f"`crabrave, die, hello, piglatin, \
+                                             pog, predict, randnum, rick, \
+                                             sans, say`")
+        embed.add_field(name="Science & Math", value=f"`add, subtract, multiply, divide, \
+                                                        power, sqrt, pi, weather`")
+        embed.add_field(name="utility", value=f"`about, avatar, github, help, \
+                                                 invite, license, ping`")                                                
+        await ctx.send(embed=embed)
 
-**PurpleBot Command List**
-
-**Moderation**
-`ban, kick, mute, unban, unmute`
-
-**Fun**
-`crabrave, die, hello, piglatin, \
-pog, predict, randnum, rick, \
-sans, say`
-
-**Science & Math**
-`add, subtract, multiply, divide, \
-power, sqrt, pi, weather`
-
-**Utility**
-`about, avatar, github, help, \
-invite, license, ping`
- ''')
-  
 def setup(client):
     client.add_cog(Help(client))
