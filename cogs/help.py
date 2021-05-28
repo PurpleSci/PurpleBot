@@ -14,44 +14,21 @@ class Help(commands.Cog):
 
 **PurpleBot Command List**
 
-:police_officer: **Moderation:**
-`ban`
-`kick`
-`mute`
-`unban`
-`unmute`
+**Moderation**
+`ban, kick, mute, unban, unmute`
 
-:joy: **Fun:**
-`crabrave`
-`die`
-`hello`
-`piglatin`
-`pogchamp`
-`predict`
-`randnum`
-`rick`
-`sans`
-`say`
+**Fun**
+`crabrave, die, hello, piglatin, \
+pog, predict, randnum, rick, \
+sans, say`
 
-:microscope: **Science & Math:**
-`add`
-`subtract`
-`multiply`
-`divide`
-`power`
-`sqrt`
-`pi`
-`ptable`
-`weather`
+**Science & Math**
+`add, subtract, multiply, divide, \
+power, sqrt, pi, weather`
 
-:gear: **Utility:**
-`about`
-`avatar`
-`github`
-`help`
-`invite`
-`license`
-`ping`
+**Utility**
+`about, avatar, github, help, \
+invite, license, ping`
  ''')
   
 def setup(client):
