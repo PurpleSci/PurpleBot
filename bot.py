@@ -238,10 +238,10 @@ async def weather(ctx, *, city: str):
         embed = discord.Embed(title=f"Weather in {city_name}",
                             color=ctx.guild.me.top_role.color,
                             timestamp=ctx.message.created_at,)
-        embed.add_field(name="Descripition", value=f"**{weather_description.capitalize()}**", inline=False)
-        embed.add_field(name="Temperature(C)", value=f"**{current_temperature_celsius}°C**", inline=False)
-        embed.add_field(name="Humidity(%)", value=f"**{current_humidity}%**", inline=False)
-        embed.add_field(name="Atmospheric Pressure(hPa)", value=f"**{current_pressure}hPa**", inline=False)
+        embed.add_field(name="Descripition", value=f"**{weather_description}**", inline=False)
+        embed.add_field(name="Temperature (C)", value=f"**{current_temperature_celsius}°C**", inline=False)
+        embed.add_field(name="Humidity (%)", value=f"**{current_humidity}%**", inline=False)
+        embed.add_field(name="Atmospheric Pressure (hPa)", value=f"**{current_pressure} hPa**", inline=False)
         embed.set_thumbnail(url="https://portal.trta.org/imis15/images/TRTA/sun.png")
         embed.set_footer(text=f"Requested by {ctx.author.name}")
         await channel.send(embed=embed)
