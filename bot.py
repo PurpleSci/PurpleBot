@@ -119,10 +119,10 @@ async def rubbish(ctx, lang):
     sentence = ""
     for i in range(random.randrange(3,7)):
         word = str()
-        if lang == en:
+        if lang == "en":
             for j in range(random.randrange(1,5)):
                 word = word + random.choice(consonants_en) + random.choice(vowels_en)
-        if lang == ru:
+        if lang == "ru":
             for j in range(random.randrange(1,5)):
                 word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
         sentence = sentence + word + " "
