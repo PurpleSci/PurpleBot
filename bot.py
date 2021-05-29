@@ -116,13 +116,9 @@ async def pi(ctx):
     await ctx.send(f'π = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679...')
 
 @client.command()
-async def ptable(ctx):
-    await ctx.send(f'Ptable is an interactive online version of the Periodic Table of Elements: https://ptable.com/')
-
-@client.command()
 async def rubbish(ctx,lang):
     sentence = ""
-    if lang == "en" or lang == "ru" or lang == "":
+    if lang == "en" or lang == "ru":
         for i in range(random.randrange(3,7)):
             word = str()
             if lang == "en" or lang == "":
