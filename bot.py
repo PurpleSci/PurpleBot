@@ -106,7 +106,7 @@ async def crab(ctx):
 
 @client.command()
 async def calc(ctx, operation, *nums):
-    if operation not in ['+', '-', '*', '/']
+    if operation not in ['+', '-', '*', '/']:
         await ctx.send('Please enter a valid operation type.')
     var = f' {operation} '.join(nums)
     await ctx.send(f'{var} = {eval(var)}')
