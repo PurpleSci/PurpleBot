@@ -38,11 +38,14 @@ death_scenarios = [
     "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
 
-vowels = ["a","e","i","o","u"]
+vowels = ["a","e","i","o","u", \
+          "а","е","и","о","у","ы","э","ю","я"]
 
 consonants = [
     "b","c","d","f","g","h","j","k","l","m", \
-    "n","p","q","r","s","t","v","w","x","y","z"
+    "n","p","q","r","s","t","v","w","x","y","z", \
+    "б","в","г","д","ж","з","к","л","м","н", \
+    "п","р","с","т","ф","х","ц","ч","ш","щ"
 ]
 
 @client.event
