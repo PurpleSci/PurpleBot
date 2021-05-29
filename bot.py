@@ -101,73 +101,15 @@ async def rick(ctx):
     await ctx.send(f'https://tenor.com/view/rick-ashley-dance-80s-music-gif-12136175')
 
 @client.command()
-async def crabrave(ctx):
+async def crab(ctx):
     await ctx.send(f'https://tenor.com/view/crabs-dancing-having-fun-having-party-party-gif-15660530')
 
 @client.command()
-async def pog(ctx):
-    await ctx.send('''
-░░░░░▒░░▄██▄░▒░░░░░░
-░░░▄██████████▄▒▒░░░
-░▒▄████████████▓▓▒░░
-▓███▓▓█████▀▀████▒░░
-▄███████▀▀▒░░░░▀█▒░░
-████████▄░░░░░░░▀▄░░
-▀██████▀░░▄▀▀▄░░▄█▒░
-░█████▀░░░░▄▄░░▒▄▀░░
-░█▒▒██░░░░▀▄█░░▒▄█░░
-░█░▓▒█▄░░░░░░░░░▒▓░░
-░▀▄░░▀▀░▒░░░░░▄▄░▒░░
-░░█▒▒▒▒▒▒▒▒▒░░░░▒░░░
-░░░▓▒▒▒▒▒░▒▒▄██▀░░░░
-░░░░▓▒▒▒░▒▒░▓▀▀▒░░░░
-░░░░░▓▓▒▒░▒░░▓▓░░░░░
-░░░░░░░▒▒▒▒▒▒▒░░░░░░
-''')
-
-@client.command()
-async def sans(ctx):
-    await ctx.send('''
-░░░░░░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░░░░░░
-░░░░░░░░░█░░░░░░░░░░░░░█░░░░░░░░░
-░░░░░░░░█░░░░░░░░░░▄▄▄░░█░░░░░░░░
-░░░░░░░░█░░▄▄▄░░▄░░███░░█░░░░░░░░
-░░░░░░░░▄█░▄░░░▀▀▀░░░▄░█▄░░░░░░░░
-░░░░░░░░█░░▀█▀█▀█▀█▀█▀░░█░░░░░░░░
-░░░░░░░░▄██▄▄▀▀▀▀▀▀▀▄▄██▄░░░░░░░░
-░░░░░░▄█░█▀▀█▀▀▀█▀▀▀█▀▀█░█▄░░░░░░
-░░░░░▄▀░▄▄▀▄▄▀▀▀▄▀▀▀▄▄▀▄▄░▀▄░░░░░
-░░░░░█░░░░▀▄░█▄░░░▄█░▄▀░░░░█░░░░░
-░░░░░░▀▄▄░█░░█▄▄▄▄▄█░░█░▄▄▀░░░░░░
-░░░░░░░░▀██▄▄███████▄▄██▀░░░░░░░░
-░░░░░░░░████████▀████████░░░░░░░░
-░░░░░░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░░░░░░
-░░░░░░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░░░░░░░
-''')
-
-@client.command()
-async def add(ctx,a,b):
-    await ctx.send(float(a) + float(b))
-
-@client.command()
-async def subtract(ctx,a,b):
-    await ctx.send(float(a) - float(b))
-
-@client.command()
-async def multiply(ctx,a,b):
-    await ctx.send(float(a) * float(b))
-
-@client.command()
-async def divide(ctx,a,b):
-    await ctx.send(float(a) / float(b))
-
-@client.command()
-async def power(ctx,a,b):
-    await ctx.send(float(a) ** float(b))
-
-@client.command()
-async def sqrt(ctx,a):
-    await ctx.send(math.sqrt(float(a)))
+async def calc(ctx, operation, *nums):
+    if operation not in ['+', '-', '*', '/']
+        await ctx.send('Please enter a valid operation type.')
+    var = f' {operation} '.join(nums)
+    await ctx.send(f'{var} = {eval(var)}')
 
 @client.command()
 async def pi(ctx):
