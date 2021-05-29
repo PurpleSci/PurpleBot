@@ -62,23 +62,23 @@ async def on_ready():
 
 @client.command()
 async def ping(ctx):
-    await ctx.send(f':ping_pong: Pong! Client-side ping latency is **{round(client.latency * 1000)}ms**')
+    await ctx.send(f'Pong! Client-side ping is **{round(client.latency * 1000)}ms**')
 
 @client.command()
 async def about(ctx):
-    await ctx.send(f':robot: PurpleBot is a Discord bot by Purple Scientist written in Python.')
+    await ctx.send(f'PurpleBot is a Discord bot by Purple Scientist written in Python.')
 
 @client.command()
 async def license(ctx):
-    await ctx.send(f':page_facing_up: PurpleBot is licensed under MIT. That means it\'s open-source and you are free to redistribute your own modifications of the bot.')
+    await ctx.send(f'PurpleBot is licensed under MIT. That means it\'s open-source and you are free to redistribute your own modifications of the bot.')
 
 @client.command()
 async def github(ctx):
-    await ctx.send(f':computer: PurpleBot\'s source code is avalaible at GitHub: https://github.com/PurpleSci/PurpleBot')
+    await ctx.send(f'PurpleBot\'s source code is avalaible at GitHub: https://github.com/PurpleSci/PurpleBot')
 
 @client.command()
 async def invite(ctx):
-    await ctx.send(f':arrow_right: If you want to add PurpleBot to your server, use this link: https://discord.com/api/oauth2/authorize?client_id=750677937837178920&permissions=8&scope=bot')
+    await ctx.send(f'If you want to add PurpleBot to your server, use this link: https://discord.com/api/oauth2/authorize?client_id=750677937837178920&permissions=8&scope=bot')
 
 @client.command()
 async def hello(ctx):
