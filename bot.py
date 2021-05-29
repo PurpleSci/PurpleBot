@@ -38,17 +38,12 @@ death_scenarios = [
     "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
 
-vowels_en = ["a","e","i","o","u"]
+vowels = ["a","e","i","o","u"]
 
-consonants_en = [
+consonants = [
     "b","c","d","f","g","h","j","k","l","m", \
     "n","p","q","r","s","t","v","w","x","y","z"
 ]
-
-vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
-
-consonants_ru = ["б","в","г","д","ж","з","к","л","м","н", \
-                 "п","р","с","т","ф","х","ц","ч","ш","щ",]
 
 @client.event
 async def on_connect():
@@ -118,19 +113,13 @@ async def pi(ctx):
 @client.command()
 async def rubbish(ctx,lang):
     sentence = ""
-    if lang == "en" or lang == "ru":
-        for i in range(random.randrange(3,7)):
-            word = str()
-            if lang == "en" or lang == "":
-                for j in range(random.randrange(1,5)):
-                    word = word + random.choice(consonants_en) + random.choice(vowels_en)
-            if lang == "ru":
-                for j in range(random.randrange(1,5)):
-                    word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
+    for i in range(random.randrange(3,7)):
+        word = str()
+        if lang == "en":
+            for j in range(random.randrange(1,5)):
+                word = word + random.choice(consonants) + random.choice(vowels)
             sentence = sentence + word + " "
         await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
-    else:
-        await ctx.send(f'Please choose a correct language.')
 
 @client.command()
 async def say(ctx,*,arg):
