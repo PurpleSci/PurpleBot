@@ -125,7 +125,7 @@ async def rubbish(ctx,lang):
     if lang == "en" or lang == "ru" or lang == "":
         for i in range(random.randrange(3,7)):
             word = str()
-            if lang == "en" or lang = "":
+            if lang == "en" or lang == "":
                 for j in range(random.randrange(1,5)):
                     word = word + random.choice(consonants_en) + random.choice(vowels_en)
             if lang == "ru":
@@ -146,13 +146,6 @@ async def say(ctx,*,arg):
             await ctx.send("You are not allowed to ping `@here`. Continuing this act will result in a punishment.")
     else:
         await ctx.send("You are not allowed to ping `@everyone`. Continuing this act will result in a punishment.")
-
-@client.command()
-async def piglatin(ctx,word):
-    if word[0] in "aeiou":
-        await ctx.send(word + 'way')
-    else:
-        await ctx.send(word[1:] + word[0] + 'ay')
 
 @client.command()
 async def avatar(ctx, member: discord.Member = None):
