@@ -111,14 +111,13 @@ async def pi(ctx):
     await ctx.send(f'π = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679...')
 
 @client.command()
-async def rubbish(ctx,lang):
+async def rubbish(ctx):
     sentence = ""
     for i in range(random.randrange(3,7)):
         word = str()
-        if lang == "en":
-            for j in range(random.randrange(1,5)):
-                word = word + random.choice(consonants) + random.choice(vowels)
-            sentence = sentence + word + " "
+        for j in range(random.randrange(1,5)):
+            word = word + random.choice(consonants) + random.choice(vowels)
+        sentence = sentence + word + " "
         await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
 
 @client.command()
