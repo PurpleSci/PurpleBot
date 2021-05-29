@@ -38,15 +38,17 @@ death_scenarios = [
     "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
 
-vowels = ["a","e","i","o","u","y", \
-          "и","ы","э","ю","я"]
+vowels_en = ["a","e","i","o","u"]
 
-consonants = [
+consonants_en = [
     "b","c","d","f","g","h","j","k","l","m", \
-    "n","p","q","r","s","t","v","w","x","z", \
-    "б","в","г","д","ж","з","к","л","м","н", \
-    "п","с","т","ф","ц","ч","ш","щ"
+    "n","p","q","r","s","t","v","w","x","y","z"
 ]
+
+vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
+
+consonants_ru = ["б","в","г","д","ж","з","к","л","м","н", \
+                 "п","р","с","т","ф","х","ц","ч","ш","щ",]
 
 @client.event
 async def on_connect():
@@ -114,12 +116,16 @@ async def pi(ctx):
     await ctx.send(f'π = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679...')
 
 @client.command()
-async def rubbish(ctx):
+async def rubbish(ctx, lang):
     sentence = ""
     for i in range(random.randrange(3,7)):
         word = str()
-        for j in range(random.randrange(1,5)):
-            word = word + random.choice(consonants) + random.choice(vowels)
+        if lang == en:
+            for j in range(random.randrange(1,5)):
+                word = word + random.choice(consonants_en) + random.choice(vowels_en)
+        if lang == ru:
+            for j in range(random.randrange(1,5)):
+                word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
         sentence = sentence + word + " "
     await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
 
