@@ -118,7 +118,7 @@ async def rubbish(ctx):
         for j in range(random.randrange(1,5)):
             word = word + random.choice(consonants) + random.choice(vowels)
         sentence = sentence + word + " "
-        await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
+    await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
 
 @client.command()
 async def say(ctx,*,arg):
