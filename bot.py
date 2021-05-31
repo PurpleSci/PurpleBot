@@ -60,7 +60,7 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(f'Pong! ({round(bot.latency * 1000)} ms)')
+    await ctx.send(f'Pong! **{round(bot.latency * 1000)} ms**')
 
 @bot.command()
 async def about(ctx):
