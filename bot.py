@@ -5,8 +5,8 @@ import random
 import requests
 from discord.ext import commands
 
-client = commands.Bot(command_prefix="p:")
-client.remove_command('help')
+bot = commands.Bot(command_prefix="p:")
+bot.remove_command('help')
 
 api_key = "80f144b817b3a44688f3e15b237db53f"
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -49,71 +49,71 @@ vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
 consonants_ru = ["б","в","г","д","ж","з","к","л","м","н", \
                  "п","р","с","т","ф","х","ц","ч","ш","щ"]
 
-@client.event
+@bot.event
 async def on_connect():
     print("Connecting to Discord...")
 
-@client.event
+@bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=f"p:help | On {len(client.guilds)} servers"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=f"p:help | On {len(bot.guilds)} servers"))
     print("PurpleBot has connected to Discord.")
 
-@client.command()
+@bot.command()
 async def ping(ctx):
-    await ctx.send(f'Pong! Client-side ping is **{round(client.latency * 1000)}ms**')
+    await ctx.send(f'Pong! ({round(bot.latency * 1000)} ms)')
 
-@client.command()
+@bot.command()
 async def about(ctx):
     await ctx.send(f'PurpleBot is a Discord bot by Purple Scientist written in Python.')
 
-@client.command()
+@bot.command()
 async def license(ctx):
     await ctx.send(f'PurpleBot is licensed under MIT. That means it\'s open-source and you are free to redistribute your own modifications of the bot.')
 
-@client.command()
+@bot.command()
 async def github(ctx):
     await ctx.send(f'PurpleBot\'s source code is avalaible at GitHub: https://github.com/PurpleSci/PurpleBot')
 
-@client.command()
+@bot.command()
 async def invite(ctx):
-    await ctx.send(f'If you want to add PurpleBot to your server, use this link: https://discord.com/api/oauth2/authorize?client_id=750677937837178920&permissions=8&scope=bot')
+    await ctx.send(f'If you want to add PurpleBot to your server, use this link: https://discord.com/api/oauth2/authorize?bot_id=750677937837178920&permissions=8&scope=bot')
 
-@client.command()
+@bot.command()
 async def hello(ctx):
     await ctx.send(random.choice(greetings))
 
-@client.command()
+@bot.command()
 async def randnum(ctx,a,b):
     await ctx.send(random.randint(int(a), int(b)))
 
-@client.command()
+@bot.command()
 async def predict(ctx):
     await ctx.send(random.choice(predictions))
 
-@client.command()
+@bot.command()
 async def die(ctx):
     await ctx.send(random.choice(death_scenarios))
 
-@client.command()
+@bot.command()
 async def rick(ctx):
     await ctx.send(f'https://tenor.com/view/rick-ashley-dance-80s-music-gif-12136175')
 
-@client.command()
+@bot.command()
 async def crab(ctx):
     await ctx.send(f'https://tenor.com/view/crabs-dancing-having-fun-having-party-party-gif-15660530')
 
-@client.command()
+@bot.command()
 async def calc(ctx, operation, *nums):
     if operation not in ['+', '-', '*', '/']:
         await ctx.send('Please enter a valid operation type.')
     var = f' {operation} '.join(nums)
     await ctx.send(f'{var} = {eval(var)}')
 
-@client.command()
+@bot.command()
 async def pi(ctx):
     await ctx.send(f'π = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679...')
 
-@client.command()
+@bot.command()
 async def rubbish(ctx, lang):
     sentence = ""
     for i in range(random.randrange(3,7)):
@@ -127,7 +127,7 @@ async def rubbish(ctx, lang):
         sentence = sentence + word + " "
     await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
 
-@client.command()
+@bot.command()
 async def say(ctx,*,arg):
     await ctx.channel.purge(limit=1)
     if(arg != "@everyone"):
@@ -138,7 +138,7 @@ async def say(ctx,*,arg):
     else:
         await ctx.send("You are not allowed to ping `@everyone`. Continuing this act will result in a punishment.")
 
-@client.command()
+@bot.command()
 async def avatar(ctx, member: discord.Member = None):
     if not member:
         member = ctx.message.author
@@ -148,7 +148,7 @@ async def avatar(ctx, member: discord.Member = None):
     embed.set_image(url=member.avatar_url)
     await ctx.send(embed=embed)
 
-@client.command()
+@bot.command()
 async def weather(ctx, *, city: str):
     city_name = city
     complete_url = base_url + "appid=" + api_key + "&q=" + city_name
@@ -176,18 +176,18 @@ async def weather(ctx, *, city: str):
     else:
         await channel.send("City not found.")
 
-@client.event
+@bot.event
 async def on_disconnect():
     print("PurpleBot disconnected.")
 
 # Let's make the Discord.py module understand that there is a folder for additional commands (cogs).
 
-@client.command()
+@bot.command()
 async def unload(ctx, extension):
-    client.unload_extension(f'cogs.{extension}')
+    bot.unload_extension(f'cogs.{extension}')
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
-        client.load_extension(f'cogs.{filename[:-3]}')
+        bot.load_extension(f'cogs.{filename[:-3]}')
 
-client.run(os.environ['DISCORD_TOKEN'])
+bot.run(os.environ['DISCORD_TOKEN'])
