@@ -55,7 +55,7 @@ async def on_connect():
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=f"p:help | On {len(bot.guilds)} servers"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=f"p:help | {len(bot.guilds)} servers"))
     print("PurpleBot has connected to Discord.")
 
 @bot.command()
