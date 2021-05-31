@@ -123,7 +123,6 @@ async def rubbish(ctx, lang):
     if lang == "ru":
         for i in range(random.randrange(3,7)):
             word = str()
-            await ctx.channel.purge(limit=1)
             for j in range(random.randrange(1,5)):
                 word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
             sentence = sentence + word + " "
@@ -131,7 +130,6 @@ async def rubbish(ctx, lang):
     else:
         for i in range(random.randrange(3,7)):
             word = str()
-            await ctx.channel.purge(limit=1)
             for j in range(random.randrange(1,5)):
                 word = word + random.choice(consonants_en) + random.choice(vowels_en)
             sentence = sentence + word + " "
