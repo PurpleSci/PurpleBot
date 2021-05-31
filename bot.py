@@ -117,8 +117,8 @@ async def calc(ctx, operation, *nums):
 async def pi(ctx):
     await ctx.send(f'π = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679...')
 
-@client.command()
-async def rubbish(ctx,lang=en):
+@bot.command()
+async def rubbish(ctx,lang="en"):
     sentence = ""
     if lang == "en" or lang == "ru":
         for i in range(random.randrange(3,7)):
