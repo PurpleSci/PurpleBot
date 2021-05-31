@@ -107,10 +107,6 @@ async def gandalf(ctx):
     await ctx.send(f'https://tenor.com/view/gandalf-happy-dance-lord-of-the-rings-lotr-gif-3551563')
 
 @bot.command()
-async def nyancat(ctx):
-    await ctx.send(f'https://tenor.com/view/neon-cat-rainbow-neon-cat-gif-15365299')
-
-@bot.command()
 async def calc(ctx, operation, *nums):
     if operation not in ['+', '-', '*', '/']:
         await ctx.send('Please enter a valid operation type.')
