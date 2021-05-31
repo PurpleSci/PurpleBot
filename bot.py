@@ -103,6 +103,10 @@ async def crab(ctx):
     await ctx.send(f'https://tenor.com/view/crabs-dancing-having-fun-having-party-party-gif-15660530')
 
 @bot.command()
+async def gandalf(ctx):
+    await ctx.send(f'https://tenor.com/view/gandalf-happy-dance-lord-of-the-rings-lotr-gif-3551563')
+
+@bot.command()
 async def calc(ctx, operation, *nums):
     if operation not in ['+', '-', '*', '/']:
         await ctx.send('Please enter a valid operation type.')
