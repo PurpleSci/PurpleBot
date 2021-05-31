@@ -120,16 +120,23 @@ async def pi(ctx):
 @bot.command()
 async def rubbish(ctx, lang):
     sentence = ""
-    for i in range(random.randrange(3,7)):
-        word = str()
-        for j in range(random.randrange(1,5)):
-            word = word + random.choice(consonants_en) + random.choice(vowels_en)
-        if lang == "ru":
+    if lang == "ru":
+        for i in range(random.randrange(3,7)):
+            word = str()
             await ctx.channel.purge(limit=1)
             for j in range(random.randrange(1,5)):
                 word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
-        sentence = sentence + word + " "
-    await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
+            sentence = sentence + word + " "
+        await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
+    else:
+        for i in range(random.randrange(3,7)):
+            word = str()
+            await ctx.channel.purge(limit=1)
+            for j in range(random.randrange(1,5)):
+                word = word + random.choice(consonants_en) + random.choice(vowels_en)
+            sentence = sentence + word + " "
+        await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
+
 
 @bot.command()
 async def say(ctx,*,arg):
