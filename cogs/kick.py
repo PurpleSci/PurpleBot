@@ -11,9 +11,9 @@ class Moderation(commands.Cog):
     @commands.command()
     @has_permissions(administrator=True)
     async def kick(self,ctx,member : discord.Member, *, reason = None):
-        embed=discord.Embed(title=":white_check_mark: Kicked!", color=discord.Colour.purple())
-        await ctx.send(embed=embed)
+        embed=discord.Embed(title="Kicked.", color=discord.Colour.purple())
         await member.kick(reason=reason)
+        await ctx.send(embed=embed)
 
 def setup(client):
     client.add_cog(Moderation(client))

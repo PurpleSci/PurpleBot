@@ -1,6 +1,5 @@
 import discord
 import os
-import math
 import random
 import requests
 from discord.ext import commands
@@ -186,8 +185,6 @@ async def weather(ctx, *, city: str):
 @bot.event
 async def on_disconnect():
     print("PurpleBot disconnected.")
-
-# Let's make the Discord.py module understand that there is a folder for additional commands (cogs).
 
 @bot.command()
 async def unload(ctx, extension):

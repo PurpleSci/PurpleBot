@@ -11,7 +11,7 @@ class Moderation(commands.Cog):
     @commands.command()
     @has_permissions(administrator=True)
     async def mute(self,ctx,member : discord.Member, *, reason = None):
-        embed=discord.Embed(title=":white_check_mark: Muted!", color=discord.Colour.purple())
+        embed=discord.Embed(title="Muted.", color=discord.Colour.purple())
         await ctx.send(embed=embed)
         
         role = discord.utils.get(ctx.guild.roles, name="Muted")

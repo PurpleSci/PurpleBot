@@ -11,9 +11,9 @@ class Moderation(commands.Cog):
     @commands.command()
     @has_permissions(administrator=True)
     async def ban(self,ctx,member : discord.Member, *, reason = None):
-        embed=discord.Embed(title=":white_check_mark: Banned!", color=discord.Colour.purple())
-        await ctx.send(embed=embed)
+        embed=discord.Embed(title="Banned.", color=discord.Colour.purple())
         await member.ban(reason=reason)
+        await ctx.send(embed=embed)
 
 def setup(client):
     client.add_cog(Moderation(client))
