@@ -119,7 +119,7 @@ async def pi(ctx):
 
 @bot.command()
 async def name(ctx):
-    names.get_full_name()
+    await ctx.send(names.get_full_name())
 
 @bot.command()
 async def shuffle(ctx, word):
