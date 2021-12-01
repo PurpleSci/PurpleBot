@@ -44,10 +44,16 @@ consonants_en = [
     "b","c","d","f","g","h","j","k","l","m", \
     "n","p","q","r","s","t","v","w","x","y","z"]
 
+consonants_en_beta = [
+    "b","c","d","f","g","h","j","k","l","m", \
+    "n","p","r","s","t","v","w", \
+    "br","cr","dr","fr","hr","kr","mr","pr","tr","ch","sh","th","ph","wh"]
+
 vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
 
-consonants_ru = ["б","в","г","д","ж","з","к","л","м","н", \
-                 "п","р","с","т","ф","х","ц","ч","ш","щ"]
+consonants_ru_beta = ["б","в","г","д","ж","з","к","л","м","н", \
+                 "п","р","с","т","ф","х","ц","ч","ш","щ",
+                 "бр","кр","др","фр","хр","мр","пр","тр"]
 
 @bot.event
 async def on_connect():
@@ -140,6 +146,23 @@ async def rubbish(ctx,lang="en"):
             if lang == "ru":
                 for j in range(random.randrange(1,5)):
                     word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
+            sentence = sentence + word + " "
+        await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
+    else:
+        await ctx.send(f'Please choose a correct language.')
+
+@bot.command()
+async def rubbish_beta(ctx,lang="en"):
+    sentence = ""
+    if lang == "en" or lang == "ru":
+        for i in range(random.randrange(3,7)):
+            word = str()
+            if lang == "en":
+                for j in range(random.randrange(1,5)):
+                    word = word + random.choice(consonants_en_beta) + random.choice(vowels_en)
+            if lang == "ru":
+                for j in range(random.randrange(1,5)):
+                    word = word + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
             sentence = sentence + word + " "
         await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
     else:
