@@ -157,16 +157,20 @@ async def rubbish_beta(ctx,lang="en"):
             word = str()
             if lang == "en":
                 for j in range(random.randrange(1,5)):
-                    if random.choice("1","2") == "1":
+                    if random.randrange(1,3) == 1:
                         word = word + random.choice(consonants_en_beta) + random.choice(vowels_en)
-                    else:
+                    if random.randrange(1,3) == 2:
                         word = word + random.choice(consonants_en_beta) + random.choice(consonants_en_beta) + random.choice(vowels_en)
+                    if random.randrange(1,3) == 3:
+                        word = word + random.choice(consonants_en_beta) + random.choice(consonants_en_beta) + random.choice(consonants_en_beta) + random.choice(vowels_en)
             if lang == "ru":
                 for j in range(random.randrange(1,5)):
-                    if random.choice("1","2") == "1":
+                    if random.choice(1,3) == 1:
                         word = word + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
-                    else:
+                    if random.choice(1,3) == 2:
                         word = word + random.choice(consonants_ru_beta) + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
+                    if random.randrange(1,3) == 3:
+                        word = word + random.choice(consonants_ru_beta) + random.choice(consonants_ru_beta) + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
             sentence = sentence + word + " "
         await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
     else:
