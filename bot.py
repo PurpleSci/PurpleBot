@@ -33,7 +33,7 @@ death_scenarios = [
     "You committed suicide.", \
     "You wanted to take a vacation in Pripyat.", \
     "Voldemort came to you and said \'Avada Kedavra!\'", \
-    "You were trying to install Gentoo, but failed.", \
+    "You were trying to install Gentoo Linux, but failed.", \
     "Jigglypuff hugged you too hard.", \
     "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
@@ -42,18 +42,16 @@ vowels_en = ["a","e","i","o","u"]
 
 consonants_en = [
     "b","c","d","f","g","h","j","k","l","m", \
-    "n","p","q","r","s","t","v","w","x","y","z"]
+    "n","p","q","r","s","t","v","w"]
 
 consonants_en_beta = [
-    "b","c","d","f","g","h","j","k","l","m", \
-    "n","p","r","s","t","v","w", \
-    "br","cr","dr","fr","hr","kr","mr","pr","tr","ch","sh","th","ph","wh"]
+    "b","c","d","g","h","l","m", \
+    "n","p","r","s","t","v","w"]
 
 vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
 
 consonants_ru_beta = ["б","в","г","д","ж","з","к","л","м","н", \
-                 "п","р","с","т","ф","х","ц","ч","ш","щ",
-                 "бр","кр","др","фр","хр","мр","пр","тр"]
+                 "п","р","с","т","ф","х","ц","ч","ш","щ"]
 
 @bot.event
 async def on_connect():
@@ -160,9 +158,11 @@ async def rubbish_beta(ctx,lang="en"):
             if lang == "en":
                 for j in range(random.randrange(1,5)):
                     word = word + random.choice(consonants_en_beta) + random.choice(vowels_en)
+                    word = word + random.choice(consonants_en_beta) + random.choice(consonants_en_beta) + random.choice(vowels_en)
             if lang == "ru":
                 for j in range(random.randrange(1,5)):
                     word = word + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
+                    word = word + random.choice(consonants_ru_beta) + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
             sentence = sentence + word + " "
         await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
     else:
