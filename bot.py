@@ -157,13 +157,13 @@ async def rubbish_beta(ctx,lang="en"):
             word = str()
             if lang == "en":
                 for j in range(random.randrange(1,5)):
-                    if random.randrange(1,2) == 1:
+                    if random.choice("1","2") == "1":
                         word = word + random.choice(consonants_en_beta) + random.choice(vowels_en)
                     else:
                         word = word + random.choice(consonants_en_beta) + random.choice(consonants_en_beta) + random.choice(vowels_en)
             if lang == "ru":
                 for j in range(random.randrange(1,5)):
-                    if random.randrange(1,2) == 1:
+                    if random.choice("1","2") == "1":
                         word = word + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
                     else:
                         word = word + random.choice(consonants_ru_beta) + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
