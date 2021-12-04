@@ -44,10 +44,6 @@ consonants_en = [
     "b","c","d","f","g","h","j","k","l","m", \
     "n","p","q","r","s","t","v","w"]
 
-consonants_en_beta = [
-    "b","c","d","g","h","l","m", \
-    "n","p","r","s","t","v","w"]
-
 vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
 
 consonants_ru = ["б","в","г","д","ж","з","к","л","м","н", \
@@ -144,33 +140,6 @@ async def rubbish(ctx,lang="en"):
             if lang == "ru":
                 for j in range(random.randrange(1,5)):
                     word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
-            sentence = sentence + word + " "
-        await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
-    else:
-        await ctx.send(f'Please choose a correct language.')
-
-@bot.command()
-async def rubbish_beta(ctx,lang="en"):
-    sentence = ""
-    if lang == "en" or lang == "ru":
-        for i in range(random.randrange(3,7)):
-            word = str()
-            if lang == "en":
-                for j in range(random.randrange(1,5)):
-                    if random.randrange(1,3) == 1:
-                        word = word + random.choice(consonants_en_beta) + random.choice(vowels_en)
-                    if random.randrange(1,3) == 2:
-                        word = word + random.choice(consonants_en_beta) + random.choice(consonants_en_beta) + random.choice(vowels_en)
-                    if random.randrange(1,3) == 3:
-                        word = word + random.choice(consonants_en_beta) + random.choice(consonants_en_beta) + random.choice(consonants_en_beta) + random.choice(vowels_en)
-            if lang == "ru":
-                for j in range(random.randrange(1,5)):
-                    if random.choice(1,3) == 1:
-                        word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
-                    if random.choice(1,3) == 2:
-                        word = word + random.choice(consonants_ru) + random.choice(consonants_ru) + random.choice(vowels_ru)
-                    if random.randrange(1,3) == 3:
-                        word = word + random.choice(consonants_ru) + random.choice(consonants_ru) + random.choice(consonants_ru) + random.choice(vowels_ru)
             sentence = sentence + word + " "
         await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
     else:
