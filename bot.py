@@ -50,7 +50,7 @@ consonants_en_beta = [
 
 vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
 
-consonants_ru_beta = ["б","в","г","д","ж","з","к","л","м","н", \
+consonants_ru = ["б","в","г","д","ж","з","к","л","м","н", \
                  "п","р","с","т","ф","х","ц","ч","ш","щ"]
 
 @bot.event
@@ -166,11 +166,11 @@ async def rubbish_beta(ctx,lang="en"):
             if lang == "ru":
                 for j in range(random.randrange(1,5)):
                     if random.choice(1,3) == 1:
-                        word = word + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
+                        word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
                     if random.choice(1,3) == 2:
-                        word = word + random.choice(consonants_ru_beta) + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
+                        word = word + random.choice(consonants_ru) + random.choice(consonants_ru) + random.choice(vowels_ru)
                     if random.randrange(1,3) == 3:
-                        word = word + random.choice(consonants_ru_beta) + random.choice(consonants_ru_beta) + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
+                        word = word + random.choice(consonants_ru) + random.choice(consonants_ru) + random.choice(consonants_ru) + random.choice(vowels_ru)
             sentence = sentence + word + " "
         await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
     else:
