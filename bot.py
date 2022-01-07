@@ -33,7 +33,7 @@ death_scenarios = [
     "You committed suicide.", \
     "You wanted to take a vacation in Pripyat.", \
     "Voldemort came to you and said \'Avada Kedavra!\'", \
-    "You were trying to install Gentoo, but failed.", \
+    "You were trying to install Gentoo Linux, but failed.", \
     "Jigglypuff hugged you too hard.", \
     "You weren't rich enough when you went to buy lamp oil, rope, and bombs."
 ]
@@ -137,23 +137,6 @@ async def rubbish(ctx,lang="en"):
             if lang == "ru":
                 for j in range(random.randrange(1,5)):
                     word = word + random.choice(consonants_ru) + random.choice(vowels_ru)
-            sentence = sentence + word + " "
-        await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
-    else:
-        await ctx.send(f'Please choose a correct language.')
-
-@bot.command()
-async def rubbish_beta(ctx,lang="en"):
-    sentence = ""
-    if lang == "en" or lang == "ru":
-        for i in range(random.randrange(3,7)):
-            word = str()
-            if lang == "en":
-                for j in range(random.randrange(1,5)):
-                    word = word + random.choice(consonants_en_beta) + random.choice(vowels_en)
-            if lang == "ru":
-                for j in range(random.randrange(1,5)):
-                    word = word + random.choice(consonants_ru_beta) + random.choice(vowels_ru)
             sentence = sentence + word + " "
         await ctx.send(sentence.capitalize().rstrip() + random.choice(["!","?","."]))
     else:
