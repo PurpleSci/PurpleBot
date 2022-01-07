@@ -44,16 +44,7 @@ consonants_en = [
     "b","c","d","f","g","h","j","k","l","m", \
     "n","p","q","r","s","t","v","w","x","y","z"]
 
-consonants_en_beta = [
-    "b","c","d","f","g","h","j","k","l","m", \
-    "n","p","r","s","t","v","w", \
-    "br","cr","dr","fr","hr","kr","mr","pr","tr","ch","sh","th","ph","wh"]
-
 vowels_ru = ["а","е","и","о","у","ы","э","ю","я"]
-
-consonants_ru_beta = ["б","в","г","д","ж","з","к","л","м","н", \
-                 "п","р","с","т","ф","х","ц","ч","ш","щ",
-                 "бр","кр","др","фр","хр","мр","пр","тр"]
 
 @bot.event
 async def on_connect():
@@ -211,7 +202,7 @@ async def weather(ctx, *, city: str):
         embed.add_field(name="Temperature (C)", value=f"**{current_temperature_celsius}°C**", inline=False)
         embed.add_field(name="Humidity (%)", value=f"**{current_humidity}%**", inline=False)
         embed.add_field(name="Atmospheric Pressure (hPa)", value=f"**{current_pressure} hPa**", inline=False)
-        embed.set_thumbnail(url="https://portal.trta.org/imis15/images/TRTA/sun.png")
+        embed.set_thumbnail(url="http://openweathermap.org/img/wn/" + z[0]["icon"] + "@2x.png")
         embed.set_footer(text=f"Requested by {ctx.author.name}")
         await channel.send(embed=embed)
     else:
