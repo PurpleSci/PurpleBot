@@ -14,7 +14,7 @@ base_url = "http://api.openweathermap.org/data/2.5/weather?"
 greetings = [
     "Hello!", "Hallo!", "Bonjour!", "Ciao!", "¡Hola!",
     "Hej!", "Ahoj!", "Aloha!", "Привет!", "Χαίρετε!",
-    "你好!", "こんにちは!", "여보세요!", "!مرحبا", "हैलो!"
+    "你好!", "こんにちは!", "여보세요!", "!مرحبا", "नमस्ते!"
 ]
 
 predictions = [
